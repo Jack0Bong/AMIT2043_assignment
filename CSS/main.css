@@ -1,0 +1,41 @@
+    /* Small devices (Phones, 600pxand down) -- this would display the text at 5.0rem on phones */
+
+    @media only screen and (max-width: 600px) {
+        h1 {
+            font-size: 1.0rem;
+        }
+        p{
+            font-size: 0.7em;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        h1 {
+            font-size: 1.0rem;
+        }
+        p{
+            font-size: 0.7em;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        h1 {
+            font-size: 1.5em!important;
+        }
+        p{
+            font-size: 0.7em;
+        }
+    }
+    
+    
+    /* Large devices (laptops/desktops, 992px and up) -- This would display the text at 10.0rem on laptops and larger screens */
+    
+    @media only screen and (min-width: 992px) {
+        h1 {
+            font-size: 10.0rem;
+        }
+
+        p{
+            font-size: 1em;
+        }
+    }
