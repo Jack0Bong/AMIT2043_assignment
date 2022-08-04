@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a class="nav-link" href="#" style="font-family: 'Roboto', sans-serif;font-weight:700;">Home</a>
+            <a class="nav-link" href="index.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#" style="font-family: 'Roboto', sans-serif;font-weight:700;">Events</a>
@@ -18,7 +18,7 @@
             <a class="nav-link" href="#" style="font-family: 'Roboto', sans-serif;font-weight:700;">Events</a>
         </li>
       </ul>
-      <button type="button" class="btn btn-outline-dark">Login</button>
+      <a class="btn btn-outline-dark" href="login.php">Login</a>
     </div>
   </div>
 </nav>

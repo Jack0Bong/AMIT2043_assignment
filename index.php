@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +15,12 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
+
 <body>
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
-    <?php require ("PHP_modules/Navigation.php") ?>    
+    <?php require("PHP_modules/Navigation.php") ?>
 
 
     <!-- Carousel -->
@@ -61,57 +63,58 @@
         <div class="row d-flex">
             <!-- Cards -->
             <div class="col pb-5">
-            <div class="cards">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="cards">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
             <!-- Cards -->
             <!-- Cards -->
             <div class="col pb-5">
-            <div class="cards">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="cards">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
             <!-- Cards -->
             <!-- Cards -->
             <div class="col pb-5">
-            <div class="cards">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="cards">
+                    <div class="card" style="width: 18rem;">
+                        <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
             <!-- Cards -->
         </div>
     </div>
 
 
-    
+
     <!-- Footer import -->
     <?php require("PHP_modules/footer.php") ?>
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
