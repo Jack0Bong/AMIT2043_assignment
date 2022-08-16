@@ -68,7 +68,13 @@
             <a href="#!" class="text-reset">Help</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Location</a>
+            <a href="Location.php" class="text-reset">Location</a>
+          </p>
+          <p>
+            <a href="FollowUs.php" class="text-reset">Follow Us</a>
+          </p>
+          <p>
+            <a href="StaffInformation.php" class="text-reset">Staff</a>
           </p>
         </div>
         <!-- Grid column -->
