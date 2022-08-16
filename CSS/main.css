@@ -55,6 +55,9 @@
         i{
             font-size: 0.7em!important;
         }
+        .event-info-text{
+            font-size: 0.8vw;
+        }
     }
 
     /* Misc Styling */
@@ -88,4 +91,17 @@
         color: #ff6383;
         transform: scale(1.3);
         transition: 0.2s all;
+    }
+
+    .vert-line {
+        display: block;
+        border-left: 1px solid black;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .event-info-text{
+        font-size: 0.8vw;
+        margin: 0!important;
+        line-height: 12px;
     }
