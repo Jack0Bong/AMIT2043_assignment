@@ -1,10 +1,7 @@
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
   <!-- Section: Social media -->
-  <section
-    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-    style="border-color: black!important;"
-  >
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="border-color: black!important;">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
       <span>Get connected with us on social networks:</span>
@@ -59,13 +56,13 @@
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">Home</a>
+            <a href="index.php" class="text-reset">Home</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Events</a>
+            <a href="event.php" class="text-reset">Events</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">About us</a>
+            <a href="about_us.php" class="text-reset">About us</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Help</a>
