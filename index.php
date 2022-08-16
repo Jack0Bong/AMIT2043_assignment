@@ -21,7 +21,6 @@
     <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
-<section style="background-color:#b85462;">
 
     <!-- Carousel -->
     <h1 class="text-center pt-5 pb-3 text-white">Upcoming Popular Events</h1>
