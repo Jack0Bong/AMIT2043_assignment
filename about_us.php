@@ -16,12 +16,10 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
-
-
-
 </head>
 
 <body>
+    
     <!-- Font Awesome CDN -->
     <!-- <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script> -->
 
@@ -30,8 +28,10 @@
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
 
-    <!-- Tables -->
-    <?php require("PHP_modules/tables.php") ?>
+
+    <!-- Content -->
+    <?php require("PHP_modules/about_us_content.php")?>
+
 
     <!-- About us Profiles -->
     <?php require("PHP_modules/about_us_profiles.php") ?>
