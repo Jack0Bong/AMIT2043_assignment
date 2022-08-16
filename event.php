@@ -10,9 +10,6 @@
     <!-- Main CSS import -->
     <link rel="stylesheet" href="CSS/main.css">
 
-    <!-- Color Calendar Import -->
-    <script src="https://cdn.jsdelivr.net/npm/color-calendar@1.0.5/dist/bundle.js"></script>
-
     <!-- Fonts CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
@@ -34,51 +31,68 @@
 
     <!-- <div id="calendar-b"></div> -->
 
-    <div class="m-auto" style="background-color:#82b2ff;padding-bottom:10%">
-            
+    <div class="m-auto pt-5" style="background-color:#4974a6;padding-bottom:10%">
+        <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(0)">January</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(0)">January</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(1)">February</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(1)">February</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(2)">March</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(2)">March</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(3)">April</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(3)">April</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(4)">May</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(4)">May</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(5)">June</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(5)">June</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(6)">July</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(6)">July</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(7)">August</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(7)">August</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(8)">September</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(8)">September</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(9)">October</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(9)">October</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(10)">November</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(10)">November</h3>
                 </div>
                 <div class="col">
-                    <h1 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(11)">December</h1>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(11)">December</h3>
                 </div>
             </div>
+        </div>
+        <div class="row w-100">
+            <div class="col"></div>
+            <div class="col mt-5 mb-5">
+                <h1 class="text-center text-white">2022 EVENTS LISTING</h1>
+            </div>
+            <div class="col">
+                <form action="" class="d-flex align-items-center h-100">
+                    <select class="form-select-sm" aria-label="Default select example">
+                        <option selected>Type of Events</option>
+                        <option value="1">Concerts</option>
+                        <option value="2">Talk Shows</option>
+                        <option value="3">Activities</option>
+                    </select>
+                </form>
+            </div>
+        </div>
         <?php
         for ($i = 0; $i < 4; $i++) {
-            echo ('<a href="#" style="text-decoration:none;color:black;"><div class="row mb-5 w-100">');
+            echo ('<a href="event-page.php" style="text-decoration:none;color:black;"><div class="row mb-5 w-100">');
             for ($iInner = 0; $iInner < 3; $iInner++) {
                 echo (' <div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:160px;background-color:white">
                         <div class="p-0" style="background-color:#ff6176;width:18%;color:white">
@@ -105,15 +119,13 @@
 
 
 
-    <!-- event JS import -->
-    <script src="JS/event.js"></script>
     <!-- Footer import -->
     <?php require("PHP_modules/footer.php") ?>
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function switchMonth(month){
+        function switchMonth(month) {
             let months = document.querySelectorAll(".month");
             for (let index = 0; index < 12; index++) {
                 months[index].classList.remove("active-month");
