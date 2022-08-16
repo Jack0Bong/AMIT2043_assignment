@@ -21,11 +21,11 @@
     <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
-
+<section style="background-color:#b85462;">
 
     <!-- Carousel -->
-    <h1 class="text-center pt-3">Upcoming Popular Events</h1>
-    <div class="container d-flex h-100 p-0 mb-5" style="width:90%;border:1px solid white;border-radius: 10px;">
+    <h1 class="text-center pt-5 pb-3 text-white">Upcoming Popular Events</h1>
+    <div class="container d-flex h-100 p-0 mb-5" style="width:90%;border-radius: 10px;">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="width:70%">
             <div class="carousel-inner" style="border-radius: 10px 0px 0px 10px;">
                 <div class="carousel-item active">
@@ -58,13 +58,13 @@
 
 
 
-    <h1 class="text-center">Recent Events</h1>
+    <h1 class="text-center text-white pt-3 pb-3 ">Recent Events</h1>
     <div class="container">
         <div class="row d-flex">
             <!-- Cards -->
             <div class="col pb-5">
                 <div class="cards">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;border: none;margin:auto;" >
                         <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -79,7 +79,7 @@
             <!-- Cards -->
             <div class="col pb-5">
                 <div class="cards">
-                    <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;border: none;margin:auto;" >
                         <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -94,7 +94,7 @@
             <!-- Cards -->
             <div class="col pb-5">
                 <div class="cards">
-                    <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 18rem;border: none;margin:auto;" >
                         <img src="https://i.ytimg.com/vi/lQezinb283E/maxresdefault.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -110,7 +110,7 @@
     </div>
 
 
-
+    </section>
     <!-- Footer import -->
     <?php require("PHP_modules/footer.php") ?>
     <!-- Bootstrap JS CDN -->
