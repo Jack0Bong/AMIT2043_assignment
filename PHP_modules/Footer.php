@@ -67,6 +67,9 @@
           <p>
             <a href="#!" class="text-reset">Help</a>
           </p>
+          <p>
+            <a href="#!" class="text-reset">Location</a>
+          </p>
         </div>
         <!-- Grid column -->
 

@@ -1,0 +1,51 @@
+h3 {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+}
+
+.socialmedia {
+    display: inline-flex;
+}
+
+.socialmedia .icon {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.socialmedia .icon span {
+    color: white;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: pink;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.socialmedia .icon .text {
+    background : pink;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -70px;
+}
+
+.socialmedia .icon span i {
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.socialmedia .icon .text::before{
+
+}
