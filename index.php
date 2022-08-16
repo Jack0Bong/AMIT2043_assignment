@@ -21,6 +21,8 @@
     <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
+    <section style="background-image:url(assets/background-picture.jpg); background-blend-mode: darken; background-color: rgb(180, 178, 178);     background-attachment: fixed;
+    background-size: 100% 100%;">
 
     <!-- Carousel -->
     <h1 class="text-center pt-5 pb-3 text-white">Upcoming Popular Events</h1>
@@ -47,7 +49,7 @@
             </button>
         </div>
         <div class="infobox p-3 position-relative" style="width:30%;background-color:#F5F5F5;border-radius: 0px 10px 10px 0px;">
-            <h6 style="color:#ff5d8f;">New Events</h6>
+            <h6 style="color:black">New Events</h6>
             <h1>Event 1 Here</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab voluptas cupiditate quibusdam expedita minima, earum exercitationem cumque nostrum quisquam rerum, voluptatibus nisi cum tenetur. At minus laudantium autem quas exercitationem.</p>
             <button type="button" class="btn btn-dark position-absolute" style="bottom:3%;">Find out More</button>
