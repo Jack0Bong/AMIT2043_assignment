@@ -15,7 +15,7 @@
                     <a class="nav-link" href="event.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-family: 'Roboto', sans-serif;font-weight:700;">Events</a>
+                    <a class="nav-link" href="about_us.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">Events</a>
                 </li>
             </ul>
 
