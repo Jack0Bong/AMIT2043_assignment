@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="#" class="w-100 h-100">
-            <img src="assets/tarc_logo.png" alt="" class="img-fluid" style="object-fit:cover;" width="30" height="30">
+        <a href="index.php"> <img src="assets/tarc_logo.png" alt="" class="img-fluid" style="object-fit:cover;" width="30" height="30"></a>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -18,6 +18,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="about_us.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">About us</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Location.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">Contact Us</a>
+                </li>
+
             </ul>
 
             <div class="mr-auto">

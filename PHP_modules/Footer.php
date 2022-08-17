@@ -56,13 +56,11 @@
             Useful links
           </h6>
 
+
+
           
-        
           <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-          <p>
-            <a href="Location.php" class="text-reset">Location</a>
+            <a href="Location.php" class="text-reset">Contact Us</a>
           </p>
           <p>
             <a href="FollowUs.php" class="text-reset">Follow Us</a>
@@ -77,12 +75,12 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Contact
           </h6>
-          <p><i class="fas fa-home me-3"></i>Taman Melati, Setapak</p>
+          <p><a href="https://www.google.com/maps/place/Jalan+Taman+Melati+3,+Taman+Melati,+53100+Kuala+Lumpur,+Wilayah+Persekutuan+Kuala+Lumpur/@3.2175292,101.7250545,15.52z/data=!4m5!3m4!1s0x31cc3866f4912a81:0x15a36ac166b676a8!8m2!3d3.2228348!4d101.725398?hl=en"><i class="fas fa-home me-3"></i>Jalan Taman Melati 3, Taman Melati, 53100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p></a>
           <p>
-            <i class="fas fa-envelope me-3"></i>
+          <a href="mailto:tarcsociety@tarc.edu.my"> <i class="fas fa-envelope me-3"></i>
             tarcsociety@tarc.edu.my
-          </p>
-          <p><i class="fas fa-phone me-3"></i> + 16 234 567 88</p>
+          </p></a>
+          <p><a href="tel:01623456788"><i class="fas fa-phone me-3"></i> + 016 234 567 88</p></a>
         </div>
         <!-- Grid column -->
       </div>
