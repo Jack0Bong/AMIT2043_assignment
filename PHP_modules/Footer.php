@@ -57,13 +57,16 @@
 
 
 
-          
           <p>
-            <a href="Location.php" class="text-reset" style="text-decoration:none">Contact Us</a>
+            <a href="index.php" class="text-reset" style="text-decoration:none">Home</a>
           </p>
           <p>
-            <a href="FollowUs.php" class="text-reset" style="text-decoration: none;">Follow Us</a>
+            <a href="event.php" class="text-reset" style="text-decoration:none">Events</a>
           </p>
+          <p>
+            <a href="contact_us.php" class="text-reset" style="text-decoration:none">Contact Us</a>
+          </p>
+        
           
         </div>
         <!-- Grid column -->
@@ -74,12 +77,12 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Contact
           </h6>
-          <p><a style="text-decoration: none;color:#5e5e5e;" href="https://www.google.com/maps/place/Jalan+Taman+Melati+3,+Taman+Melati,+53100+Kuala+Lumpur,+Wilayah+Persekutuan+Kuala+Lumpur/@3.2175292,101.7250545,15.52z/data=!4m5!3m4!1s0x31cc3866f4912a81:0x15a36ac166b676a8!8m2!3d3.2228348!4d101.725398?hl=en"><i class="fas fa-home me-3"></i>Jalan Taman Melati 3, Taman Melati, 53100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p></a>
+          <p><a style="text-decoration: none;color:inherit;" target="blank" href="https://www.google.com/maps/place/Jalan+Taman+Melati+3,+Taman+Melati,+53100+Kuala+Lumpur,+Wilayah+Persekutuan+Kuala+Lumpur/@3.2175292,101.7250545,15.52z/data=!4m5!3m4!1s0x31cc3866f4912a81:0x15a36ac166b676a8!8m2!3d3.2228348!4d101.725398?hl=en"><i class="fas fa-home me-3"></i>Jalan Taman Melati 3, Taman Melati, 53100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p></a>
           <p>
-          <a style="text-decoration: none;color:#5e5e5e;" href="mailto:tarcsociety@tarc.edu.my"> <i class="fas fa-envelope me-3"></i>
+          <a style="text-decoration: none;color:inherit;" href="mailto:tarcsociety@tarc.edu.my"> <i class="fas fa-envelope me-3"></i>
             tarcsociety@tarc.edu.my
           </p></a>
-          <p><a style="text-decoration: none;color:#5e5e5e;" href="tel:01623456788"><i class="fas fa-phone me-3"></i> + 016 234 567 88</p></a>
+          <p><a style="text-decoration: none;color:inherit;" href="tel:01623456788"><i class="fas fa-phone me-3"></i> + 016 234 567 88</p></a>
         </div>
         <!-- Grid column -->
       </div>
