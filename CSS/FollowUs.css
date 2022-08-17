@@ -1,4 +1,5 @@
 h3 {
+    padding: 70px 0;
     display: grid;
     height: 100%;
     width: 100%;
@@ -32,13 +33,22 @@ h3 {
 }
 
 .socialmedia .icon .text {
-    background : pink;
+    background: pink;
     color: white;
     padding: 10px 18px;
     border-radius: 25px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
+    top: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.socialmedia .icon:hover .text {
     top: -70px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .socialmedia .icon span i {
@@ -46,6 +56,13 @@ h3 {
     line-height: 60px;
 }
 
-.socialmedia .icon .text::before{
-
+.socialmedia .icon .text::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: pink;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
 }
