@@ -21,7 +21,6 @@
 
             <div class="mr-auto">
                 <a class="btn btn-outline-dark " href="account.php">Account</a>
-
                 <a class="btn btn-outline-dark " href="login.php">Login</a>
             </div>
         </div>

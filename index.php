@@ -21,8 +21,7 @@
     <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
-    <section style="background-image:url(assets/background-picture.jpg); background-blend-mode: darken; background-color: rgb(180, 178, 178);     background-attachment: fixed;
-    background-size: 100% 100%;">
+    <section style="background-image: url(assets/concert-main.jpeg);background-attachment: fixed;background-size: 100% 100%; background-blend-mode:darken;background-color: #606061;">
 
     <!-- Carousel -->
     <h1 class="text-center pt-5 pb-3 text-white">Upcoming Popular Events</h1>

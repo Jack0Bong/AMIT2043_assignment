@@ -31,47 +31,46 @@
 
     <!-- <div id="calendar-b"></div> -->
 
-    <div class="m-auto pt-5" style="background-image:url(assets/2196236.jpg); background-blend-mode: darken; background-color: rgb(180, 178, 178);     background-attachment: fixed;
-    background-size: 100% 100%;">
+    <div class="m-auto pt-5" style="background-image: url(assets/Party-starters.jpeg);background-attachment: fixed;background-size: 100% 100%; background-blend-mode:darken;background-color: #606061;">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(0)">January</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(0)">January</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(1)">February</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(1)">February</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(2)">March</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(2)">March</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(3)">April</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(3)">April</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(4)">May</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(4)">May</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(5)">June</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(5)">June</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(6)">July</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(6)">July</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(7)">August</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(7)">August</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(8)">September</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(8)">September</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(9)">October</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(9)">October</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(10)">November</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(10)">November</h3>
                 </div>
                 <div class="col">
-                    <h3 class="month text-center pt-3 pb-3 text-transparent text-white" onclick="switchMonth(11)">December</h3>
+                    <h3 class="month text-center pt-3 pb-3 text-transparent" onclick="switchMonth(11)">December</h3>
                 </div>
             </div>
         </div>
@@ -93,7 +92,7 @@
         </div>
         <?php
         for ($i = 0; $i < 4; $i++) {
-            echo ('<a href="event-page.php" style="text-decoration:none;color:black;"><div class="row mb-5 w-100">');
+            echo ('<a href="event-page.php" style="text-decoration:none;color:black;"><div class="row pb-5 w-100">');
             for ($iInner = 0; $iInner < 3; $iInner++) {
                 echo (' <div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:160px;background-color:white">
                         <div class="p-0" style="background-color:#ff6176;width:18%;color:white">

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- Main CSS import -->
     <link rel="stylesheet" href="CSS/main.css">
 
     <!-- Fonts CDN -->
@@ -15,29 +14,17 @@
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-
-
-
-
 </head>
 
 <body>
     <!-- Font Awesome CDN -->
-    <!-- <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script> -->
-
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-
+    <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
+    <section style="background-image: url(assets/concert-main.jpeg);background-attachment: fixed;background-size: 100% 100%; background-blend-mode:darken;background-color: #606061;">
 
-    <!-- Tables -->
-    <?php require("PHP_modules/tables.php") ?>
-
-    <!-- About us Profiles -->
-    <?php require("PHP_modules/about_us_profiles.php") ?>
-
-    <!-- event JS import -->
-    <script src="JS/event.js"></script>
+    
+    
     <!-- Footer import -->
     <?php require("PHP_modules/footer.php") ?>
     <!-- Bootstrap JS CDN -->
