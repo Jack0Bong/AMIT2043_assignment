@@ -1,4 +1,6 @@
 <!-- Footer -->
+    <!-- Follow Us Css -->
+    <link rel="stylesheet" href="CSS/FollowUs.css">
 <footer class="text-center text-lg-start bg-dark text-muted">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" style="border-color: #5e5e5e!important;">
@@ -8,26 +10,28 @@
     <!-- Left -->
 
     <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
+    <div class="socialmedia">
+
+<div class="button">
+    <div class="icon-footer" href="https://www.facebook.com/profile.php?id=100061239282764">
+    <div class="text popup-info">Facebook</div>    
+        <span class="icon-border"> <i class="fab footer-icons fa-facebook-f"></i></span>
     </div>
+</div>
+
+<div class="button">
+    <div class="icon-footer">
+    <div class="text popup-info" >Twitter</div>  
+        <span class="icon-border"> <i class="fab footer-icons fa-twitter"></i></span>
+    </div>
+</div>
+
+<div class="button">
+    <div class="icon-footer">
+    <div class="text popup-info">Instagram</div>  
+        <span class="icon-border"><i class="fab footer-icons fa-instagram"></i></span>
+    </div>
+</div>
     <!-- Right -->
   </section>
   <!-- Section: Social media -->
@@ -41,7 +45,7 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>TARC SOCIETY
+            TARC SOCIETY
           </h6>
           <p>
             Get connected with the university through fun activities!
@@ -52,7 +56,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+            Links
           </h6>
 
 
@@ -62,6 +66,9 @@
           </p>
           <p>
             <a href="event.php" class="text-reset" style="text-decoration:none">Events</a>
+          </p>
+          <p>
+            <a href="about_us.php" class="text-reset" style="text-decoration:none">About Us</a>
           </p>
           <p>
             <a href="contact_us.php" class="text-reset" style="text-decoration:none">Contact Us</a>
@@ -94,7 +101,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2022 Copyright:
-    <a class="text-reset fw-bold" href="#">TARCSociety.com</a>
+    <a class="text-reset fw-bold" href="index.php">TARCSociety.com</a>
   </div>
   <!-- Copyright -->
 </footer>

@@ -95,7 +95,7 @@
             echo ('<a href="event-page.php" style="text-decoration:none;color:black;"><div class="row pb-5 w-100">');
             for ($iInner = 0; $iInner < 3; $iInner++) {
                 echo (' <div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:160px;background-color:white">
-                        <div class="p-0" style="background-color:#ff6176;width:18%;color:white">
+                        <div class="p-0" style="background-color:#ff6176;width:18%;max-width:76px;color:white">
                             <h2 class="text-center pt-2">06</h1>
                             <h3 class="text-center ">Aug</h3>
                         </div>
@@ -125,6 +125,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // script to get switch months
         function switchMonth(month) {
             let months = document.querySelectorAll(".month");
             for (let index = 0; index < 12; index++) {
@@ -133,6 +134,11 @@
             months[month].classList.add("active-month");
             console.log("test");
         }
+
+        const date = new Date()
+        let autoMonth = document.querySelectorAll(".month");
+        autoMonth[parseInt(date.getMonth())-1].classList.add("active-month");
+
     </script>
 </body>
 

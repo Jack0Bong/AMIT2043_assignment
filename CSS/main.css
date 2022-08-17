@@ -40,6 +40,12 @@
         }
     }
 
+    @media only screen and (min-width: 1400px) {
+        .footer-icons{
+            font-size: 1em!important;
+        }
+    }
+
     /* 1366pxand down) -- this would display the text at 5.0rem on phones */
 
     @media only screen and (max-width: 1400px) {
@@ -104,4 +110,22 @@
         font-size: 0.8vw;
         margin: 0!important;
         line-height: 12px;
+    }
+
+    .icon-border{
+        height: 30px!important;
+        width: 30px!important;
+        background-color: #943a4c!important;
+    }
+
+    .icon-border i{
+        line-height: 30px!important;
+    }
+
+    .popup-info{
+        background-color: #943a4c!important;
+    }
+
+    .text::before{
+        background-color: #943a4c!important;
     }

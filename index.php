@@ -48,7 +48,7 @@
             </button>
         </div>
         <div class="infobox p-3 position-relative" style="width:30%;background-color:#F5F5F5;border-radius: 0px 10px 10px 0px;">
-            <h6 style="color:black">New Events</h6>
+            <h6 class="text-white" style="padding:6px;background-color:#ed8c9f;border-radius:15px;border:1px solid #ed8c9f;width:fit-content">New Event</h6>
             <h1>Event 1 Here</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab voluptas cupiditate quibusdam expedita minima, earum exercitationem cumque nostrum quisquam rerum, voluptatibus nisi cum tenetur. At minus laudantium autem quas exercitationem.</p>
             <button type="button" class="btn btn-dark position-absolute" style="bottom:3%;">Find out More</button>
