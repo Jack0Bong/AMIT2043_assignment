@@ -58,12 +58,12 @@
     <!-- Contact Start -->
 
     <div class="bg-image" 
-     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg'); background-attachment: fixed;background-size: 100% 100%;;
             height: 100vh">
     <div class="container-xxl py-6">
         <div class="container">
             <div class="section-header text-center mx-auto mb-5 wow fadeInUp bg" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-3 pt-4">Contact Us</h1>
+                <h1 class="display-1 mb-3 pt-4 font-weight-bold  ">Contact Us</h1>
                 <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
             </div>
             <div class="row g-5 justify-content-center">
@@ -118,17 +118,18 @@
                     </form>
                 </div>
             </div>
+            
         </div>
+        
     </div>
+       
     </div>
+    
     <!-- Contact End -->
+ 
 
 
-    <!-- Google Map Start -->
-    <div class="container-xxl px-auto py-5 wow fadeIn" data-wow-delay="0.1s" style="margin-bottom: -6px;">
-        <iframe class="w-100" style="height: 450px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15934.115710135535!2d101.7250545!3d3.2175292!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3866f4912a81%3A0x15a36ac166b676a8!2sJalan%20Taman%20Melati%203%2C%20Taman%20Melati%2C%2053100%20Kuala%20Lumpur%2C%20Wilayah%20Persekutuan%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1660726782113!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-    <!-- Google Map End -->
+ 
 
 
 
