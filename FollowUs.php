@@ -29,7 +29,7 @@
         <div class="socialmedia">
 
             <div class="button">
-                <div class="icon">
+                <div class="icon" href="https://www.facebook.com/profile.php?id=100061239282764">
                 <div class="text">Facebook</div>    
                     <span> <i class="fab fa-facebook-f"></i></span>
                 </div>
@@ -37,7 +37,7 @@
 
             <div class="button">
                 <div class="icon">
-                <div class="text">Twitter</div>  
+                <div class="text" >Twitter</div>  
                     <span> <i class="fab fa-twitter"></i></span>
                 </div>
             </div>
