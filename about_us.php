@@ -29,44 +29,44 @@
 
 
     <!-- Content -->
-    
 
 
 
-<!------ Include the above in your HEAD tag ---------->
 
-<div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    
+    <!------ Include the above in your HEAD tag ---------->
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    
-       
-        
-       
-        
-        
-      </ul>
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+
+
+
+        </ul>
     </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-collapse -->
-  </nav>
-<div class="image-aboutus-banner "style="margin-top:70px">
-   <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-         <h1 class="lg-text">About Us</h1>
-         <p class="image-aboutus-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-       </div>
+    </div><!-- /.container-collapse -->
+    </nav>
+    <div class="image-aboutus-banner pt " style=" background-image: url(assets/about_us_pic.jpg);background-attachment: fixed;background-size: 100% 100%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="lg-text">About Us</h1>
+                    <p class="image-aboutus-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-<div class="container paddingTB60">
-	<div class="row">
+    <div class="container paddingTB60">
+        <div class="row">
 
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
 
-                 <hr>
+                <hr>
 
                 <h2>Good codebase and in-built powerful standards</h2>
 
@@ -86,72 +86,29 @@
 
                 <hr>
 
-               
-               
+
+
 
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-md-4 ps-5">
 
-                <!-- Blog Search Well -->
-                <div class="well bgcolor-skyblue">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input class="form-control" type="text">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">We dwelling elegance do shutters appetite yourself diverted.</h5>
+                        <p class="card-text">The principal reason we continue to adapt and evolve our business model is to ensure that we are meeting our customers’ expectations. One example of this has been to use modern technology and the introduction of the real time tracking our teams using GPS. 
+                            This ensures our customers get the time they have paid for has been spent at our customers’ homes since this is the most common problem within our industry.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
-                    <!-- /.input-group -->
-                </div>
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Quick Links</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div>
-
-                <!-- Side Widget Well -->
-                <div class="well bgcolor-skyblue">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
                 </div>
 
             </div>
 
         </div>
-</div>
-  
-  
+    </div>
+
+
 
 
 
@@ -159,10 +116,7 @@
 
     <!-- About us Profiles -->
     <!-- IMPORT EXTERNAL CSS IN PROFILE -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="CSS/about_us_content.css">
     <!--  -->
 
@@ -171,7 +125,7 @@
     <!-- About us Profiles -->
     <div class="container mt-4 mb-4 p-3 d-flex ml-auto justify-content-between ">
         <div class="card p-4">
-            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
+            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light"> <img src="assets/manager1.jpg" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
                 <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
@@ -182,7 +136,7 @@
 
         </div>
         <div class="card p-4">
-            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
+            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light"> <img src="assets/manager2.jpg" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
                 <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
@@ -195,7 +149,7 @@
 
     <div class="container mt-4 mb-4 p-3 d-flex ml-auto justify-content-between ">
         <div class="card p-4">
-            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
+            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light"> <img src="assets/manager3.jpg" height="100" width="100" style="border:" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
                 <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
@@ -206,7 +160,7 @@
 
         </div>
         <div class="card p-4">
-            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
+            <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light"> <img src="assets/manager4.jpg" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
                 <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
