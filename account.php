@@ -16,12 +16,21 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 
+<<<<<<< Updated upstream
     <!<!-- Account Css -->
         <link rel="stylesheet" href="CSS/account.css">
+=======
+    <!-- Account Css -->
+    <link rel="stylesheet" href="CSS/account.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+>>>>>>> Stashed changes
 
 
 
+</head>
 
+<<<<<<< Updated upstream
 </head>
 
 <body>
@@ -34,11 +43,35 @@
     <?php require("PHP_modules/Navigation.php") ?>
 
 
+=======
+<body>
+    <!-- Font Awesome CDN -->
+    <!-- <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script> -->
+
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
+    <!-- Navigation bar import -->
+    <?php require("PHP_modules/Navigation.php") ?>
+
+
+>>>>>>> Stashed changes
     <!-- Account content -->
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
+<<<<<<< Updated upstream
                 <div class="d-flex flex-column align-items-cEnter text-cEnter p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+=======
+                <div class="d-flex flex-column align-items-cEnter text-cEnter p-3 py-5">
+                    <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                    <span class="font-weight-bold">Edogaru</span>
+                    <span class="text-black-50">edogaru@mail.com.my</span>
+                    <a href="booking-list.php" style="text-decoration:none;" class="d-flex justify-content-between w-50 align-items-center pt-2">
+                        <span>Booking List</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </div>
+>>>>>>> Stashed changes
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
@@ -63,8 +96,12 @@
                         <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
                         <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
                     </div>
+<<<<<<< Updated upstream
                     <div class="mt-5 text-cEnter"><button class="btn btn-primary profile-button " type="button">Save Profile</butprofile-buttonton>
                     </div>
+=======
+                    <div class="mt-5 text-cEnter"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+>>>>>>> Stashed changes
                 </div>
             </div>
             <div class="col-md-4">
