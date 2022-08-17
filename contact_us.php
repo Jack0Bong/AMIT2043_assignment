@@ -57,18 +57,20 @@
 
     <!-- Contact Start -->
 
-    
+    <div class="bg-image" 
+     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+            height: 100vh">
     <div class="container-xxl py-6">
         <div class="container">
             <div class="section-header text-center mx-auto mb-5 wow fadeInUp bg" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-5 mb-3">Contact Us</h1>
+                <h1 class="display-5 mb-3 pt-4">Contact Us</h1>
                 <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
             </div>
             <div class="row g-5 justify-content-center">
                 <div class="col-lg-5 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-info text-white d-flex flex-column justify-content-center h-100 p-5">
                         <h5 class="text-white">Call Us</h5>
-                        <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+ 016 234 567 88</p>
+                        <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+ 60 16 234 567 88</p>
                         <h5 class="text-white">Email Us</h5>
                         <p class="mb-5"><i class="fa fa-envelope me-3"></i>tarcsociety@tarc.edu.my</p>
                         <h5 class="text-white">Office Address</h5>
@@ -117,6 +119,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Contact End -->
 

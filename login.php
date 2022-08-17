@@ -36,14 +36,14 @@
 
     <div id="login-form" style="padding-bottom:150px">
       <!-- Email input -->
-      <div class="form-outline mb-4">
-        <label class="form-label" for="loginName">Email or username</label>
+      <div class="form-outline mb-4 text-white">
+        <label class="form-label " for="loginName">Email or username</label>
         <input type="email" id="loginName" class="form-control" />
         <p style="color:red">Incorrect something something</p>
       </div>
 
       <!-- Password input -->
-      <div class="form-outline mb-4">
+      <div class="form-outline mb-4 text-white">
         <label class="form-label" for="loginPassword">Password</label>
         <input type="password" id="loginPassword" class="form-control" />
         <p style="color:red">Incorrect something something</p>
@@ -62,7 +62,7 @@
     <!-- REGISTER FORMS -->
 
     <div style="display:none;" id="register-form">
-      <form class="pb-5">
+      <form class="pb-5 text-white">
 
         <!-- Name input -->
         <div class="form-outline mb-4">

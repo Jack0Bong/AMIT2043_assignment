@@ -82,7 +82,7 @@
           <a style="text-decoration: none;color:inherit;" href="mailto:tarcsociety@tarc.edu.my"> <i class="fas fa-envelope me-3"></i>
             tarcsociety@tarc.edu.my
           </p></a>
-          <p><a style="text-decoration: none;color:inherit;" href="tel:01623456788"><i class="fas fa-phone me-3"></i> + 016 234 567 88</p></a>
+          <p><a style="text-decoration: none;color:inherit;" href="tel:01623456788"><i class="fas fa-phone me-3"></i> + 60 1234 567 88</p></a>
         </div>
         <!-- Grid column -->
       </div>
