@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="#" class="w-100 h-100">
-        <a href="index.php"> <img src="assets/tarc_logo.png" alt="" class="img-fluid" style="object-fit:cover;" width="30" height="30"></a>
+        <a href="index.php"> <img src="assets/tarc_logo.png" alt="" class="img-fluid" style="object-fit:cover; margin-right:30px;" width="30" height="30"></a>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
