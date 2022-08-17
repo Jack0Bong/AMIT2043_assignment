@@ -2,21 +2,21 @@
 
 .form-control:focus {
     box-shadow: none;
-    border-color: #BA68C8
+    border-color: #fadcff
 }
 
 .profile-button {
-    background: rgb(99, 39, 120);
+    background: rgb(94, 104, 201);
     box-shadow: none;
     border: none
 }
 
 .profile-button:hover {
-    background: #682773
+    background: #5d88e7
 }
 
 .profile-button:focus {
-    background: #682773;
+    background: #4268b9;
     box-shadow: none
 }
 
@@ -35,7 +35,7 @@
 }
 
 .add-experience:hover {
-    background: #BA68C8;
+    background: #63a7bb;
     color: #fff;
     cursor: pointer;
     border: solid 1px #BA68C8
