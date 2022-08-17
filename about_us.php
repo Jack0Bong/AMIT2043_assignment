@@ -21,9 +21,8 @@
 <body>
 
     <!-- Font Awesome CDN -->
-    <!-- <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
