@@ -31,7 +31,7 @@
 
     <!-- <div id="calendar-b"></div> -->
 
-    <div class="m-auto pt-5" style="background-color:#4974a6;padding-bottom:10%">
+    <div class="m-auto pt-5" style="background-image: url(assets/Party-starters.jpeg);background-attachment: fixed;background-size: 100% 100%; background-blend-mode:darken;background-color: #606061;">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -92,7 +92,7 @@
         </div>
         <?php
         for ($i = 0; $i < 4; $i++) {
-            echo ('<a href="event-page.php" style="text-decoration:none;color:black;"><div class="row mb-5 w-100">');
+            echo ('<a href="event-page.php" style="text-decoration:none;color:black;"><div class="row pb-5 w-100">');
             for ($iInner = 0; $iInner < 3; $iInner++) {
                 echo (' <div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:160px;background-color:white">
                         <div class="p-0" style="background-color:#ff6176;width:18%;color:white">

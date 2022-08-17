@@ -55,15 +55,9 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Useful links
           </h6>
-          <p>
-            <a href="index.php" class="text-reset">Home</a>
-          </p>
-          <p>
-            <a href="event.php" class="text-reset">Events</a>
-          </p>
-          <p>
-            <a href="about_us.php" class="text-reset">About us</a>
-          </p>
+
+          
+        
           <p>
             <a href="#!" class="text-reset">Help</a>
           </p>
@@ -73,9 +67,7 @@
           <p>
             <a href="FollowUs.php" class="text-reset">Follow Us</a>
           </p>
-          <p>
-            <a href="StaffInformation.php" class="text-reset">Staff</a>
-          </p>
+          
         </div>
         <!-- Grid column -->
 

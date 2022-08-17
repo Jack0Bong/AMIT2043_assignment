@@ -14,14 +14,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="event.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">Events</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-family: 'Roboto', sans-serif;font-weight:700;">Events</a>
+                    <a class="nav-link" href="about_us.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">About us</a>
                 </li>
             </ul>
 
             <div class="mr-auto">
                 <a class="btn btn-outline-dark " href="account.php">Account</a>
-
                 <a class="btn btn-outline-dark " href="login.php">Login</a>
             </div>
         </div>

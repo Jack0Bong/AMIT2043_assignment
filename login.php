@@ -21,7 +21,7 @@
   <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
   <?php require("PHP_modules/Navigation.php") ?>
 
-
+<div class="pt-5" style="background-image: url(assets/lantern.jpeg);background-attachment: fixed;background-size: 100% 100%; background-blend-mode:darken;background-color: #606061;">
   <div class="container" style="width:30vw;min-width:350px;">
     <!-- Pills navs -->
     <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
@@ -34,7 +34,7 @@
     </ul>
     <!-- Pills navs -->
 
-    <div id="login-form" style="margin-bottom:150px">
+    <div id="login-form" style="padding-bottom:150px">
       <!-- Email input -->
       <div class="form-outline mb-4">
         <label class="form-label" for="loginName">Email or username</label>
@@ -62,7 +62,7 @@
     <!-- REGISTER FORMS -->
 
     <div style="display:none;" id="register-form">
-      <form>
+      <form class="pb-5">
 
         <!-- Name input -->
         <div class="form-outline mb-4">
@@ -101,9 +101,10 @@
 
 
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block d-block m-auto" style="margin-bottom:5%!important">Sign up</button>
+        <button type="submit" class="btn btn-primary btn-block d-block m-auto">Sign up</button>
       </form>
     </div>
+  </div>
   </div>
 
   <!-- Footer import -->
