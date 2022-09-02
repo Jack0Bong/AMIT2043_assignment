@@ -27,7 +27,6 @@
         <table class="table table" style="border:1px solid #f0f0f2">
             <div class="d-flex justify-content-between" style="width:100%;">
                 <input type="text ps-5 pe-5" style="width:100%;border:none;font-family: 'Roboto';font-weight: 600;" placeholder='Search for keywords'></input>
-                <button class="btn btn-success">Add</button>
             </div>
             <tbody>
                 <tr class="text-white" style="background-color: #47ad62;">

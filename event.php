@@ -106,6 +106,7 @@
                                 <p class="p-3 pt-0" style="font-size:0.7em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quibusdam.</p>
                                 <i class="fa-solid fa-calendar-days ps-3"></i><span class="pt-0"> 10:00 AM - 8:00 PM</span>
                                 <i class="fa-solid fa-ticket ps-3"></i><span> Free</span>
+                                <i class="fa-sharp fa-solid fa-chair ps-3"></i><span>100 Left</span>
                             </div>
                         </div>
                     </div>'

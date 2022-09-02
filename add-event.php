@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- Main CSS import -->
     <link rel="stylesheet" href="CSS/main.css">
 
     <!-- Fonts CDN -->
@@ -15,39 +14,57 @@
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-
-    <!-- Color Calendar CSS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar@1.0.5/dist/css/theme-basic.css" />
-
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
+
     <?php require("PHP_modules/Navigation.php") ?>
+    <h1 class="text-center mt-5">Add New Events</h1>
+    <div class="pt-5">
+  <div class="container" style="width:30vw;min-width:350px;">
 
+    <div id="login-form" style="padding-bottom:150px">
+      <div class="form-outline mb-4 text-black">
+        <label class="form-label " for="loginName">Event Name</label>
+        <input type="email" id="loginName" class="form-control" />
+        <p style="color:red">Incorrect something something</p>
+      </div>
 
-    
+      <div class="form-outline mb-4 text-black">
+        <label class="form-label" for="loginPassword">Date</label>
+        <input type="date" id="loginPassword" class="form-control" />
+        <p style="color:red">Incorrect something something</p>
+      </div>
 
+      <div class="form-outline mb-4 text-black">
+        <label class="form-label" for="loginPassword">Price</label>
+        <input type="text" id="loginPassword" class="form-control" />
+        <p style="color:red">Incorrect something something</p>
+      </div>
 
+      <div class="form-outline mb-4 text-black">
+        <label class="form-label" for="loginPassword">Location</label>
+        <input type="text" id="loginPassword" class="form-control" />
+        <p style="color:red">Incorrect something something</p>
+      </div>
+
+      <!-- 2 column grid layout -->
+      <div class="row mb-4">
+        <div class="col-md-6 d-flex justify-content-center">
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-success btn-block d-block m-auto">Add Event</button>
+    </div>
+</div>
     <!-- Footer import -->
     <?php require("PHP_modules/footer.php") ?>
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        function switchMonth(month){
-            let months = document.querySelectorAll(".month");
-            for (let index = 0; index < 12; index++) {
-                months[index].classList.remove("active-month");
-            }
-            months[month].classList.add("active-month");
-            console.log("test");
-        }
-    </script>
 </body>
 
 </html>

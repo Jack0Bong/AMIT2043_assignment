@@ -61,6 +61,7 @@
                 <button class="btn btn-success">Buy Ticket</button>
                 <div class="d-flex align-items-center ps-2 pe-2 text-white" style="background-color: #3080ff;border-radius:15px"><i class="fa-solid fa-person pe-2"></i><span> 1000 People are going</span></div>
                 </div>
+                <i class="fa-sharp fa-solid fa-chair ps-3 text-danger"></i><span class="text-danger">100 Left</span>
             </div>
         </div>
     </div>
