@@ -30,31 +30,62 @@
     <?php require("PHP_modules/Navigation.php") ?>
 
     <div class="container mt-5 mb-5">
+        <h1 class="text-center mb-5">Edit Event</h1>
         <div class="d-flex justify-content-center">
-            <img src="assets/event.jfif" alt="" srcset="" style="width: 30%;">
-            <div class="ms-5" style="width: 35%;min-width:450px;max-width:650px">
-                <div>
-                <label for="">Event Name</label>
+            <div class="form-outline mb-4 text-black">
+                <label class="form-label " for="eventName">Event Thumbnail</label>
                 <br>
-                <input type="text" placeholder="Event Name" value="SPD GAR MUSIC EVENT">
-                </div>
-                <div>
-                <label for="">Date</label>
+                <img class="m-auto d-block" src="assets/event.jfif" alt="" id="preview-img" style="width: 30vw;max-width:300px">
                 <br>
-                <input type="date" name="" id="">
-                </div>
-                <div>
-                <label for="">Price</label>
-                <br>
-                <input type="text" name="" id="" value="12.00">
-                </div>
-                <div>
-                <label for="">Location</label>
-                <br>
-                <input type="text" placeholder="Event Name" value="Setapak">
+                <input type="file" class="form-control-file" accept="image/gif, image/jpeg, image/png" onchange="previewImg(event)">
+                <p style="color:red">Incorrect something something</p>
+            </div>
+            <div id="event-form" class="ms-5" style="padding-bottom:150px">
+                <div class="form-outline mb-4 text-black">
+                    <label class="form-label " for="eventName">Event Name</label>
+                    <input type="email" id="eventName" class="form-control" />
+                    <p style="color:red">Incorrect something something</p>
                 </div>
 
-                <button class="btn btn-success mt-3">Save Changes</button>
+                <div class="form-outline mb-4 text-black">
+                    <label class="form-label " for="eventName">Event Description</label>
+                    <br>
+                    <textarea name="" id="" cols="40" rows="10" class="form-control"></textarea>
+                    <p style="color:red">Incorrect something something</p>
+                </div>
+
+                <div class="form-outline mb-4 text-black">
+                    <label class="form-label" for="eventPassword">Date</label>
+                    <input type="date" id="eventPassword" class="form-control" />
+                    <p style="color:red">Incorrect something something</p>
+                </div>
+
+                <div class="form-outline mb-4 text-black">
+                    <label class="form-label" for="eventPassword">Price</label>
+                    <input type="number" min="1" step="any" class="form-control" />
+                    <p style="color:red">Incorrect something something</p>
+                </div>
+
+                <div class="form-outline mb-4 text-black">
+                    <label class="form-label" for="eventPassword">Time</label>
+                    <input type="time" id="eventPassword" class="form-control" />
+                    <p style="color:red">Incorrect something something</p>
+                </div>
+
+                <div class="form-outline mb-4 text-black">
+                    <label class="form-label" for="eventPassword">Location</label>
+                    <input type="text" id="eventPassword" class="form-control" />
+                    <p style="color:red">Incorrect something something</p>
+                </div>
+
+                <!-- 2 column grid layout -->
+                <div class="row mb-4">
+                    <div class="col-md-6 d-flex justify-content-center">
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-success btn-block d-block m-auto">Save Changes</button>
             </div>
         </div>
     </div>
@@ -64,6 +95,13 @@
     <?php require("PHP_modules/footer.php") ?>
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function previewImg(event){
+        let image = document.querySelector("#preview-img");
+        image.src = URL.createObjectURL(event.target.files[0]);
+      }
+    </script>
 </body>
 
 </html>

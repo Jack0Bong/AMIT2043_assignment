@@ -92,9 +92,9 @@
         </div>
         <?php
         for ($i = 0; $i < 4; $i++) {
-            echo ('<a href="event-page.php" style="text-decoration:none;color:black;"><div class="row pb-5 w-100">');
+            echo ('<a href="event-page.php" class="d-inline" style="text-decoration:none;color:black;"><div class="row pb-5 m-auto" style="width:fit-content">');
             for ($iInner = 0; $iInner < 3; $iInner++) {
-                echo (' <div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:160px;background-color:white">
+                echo (' <div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:150px;background-color:white;max-width:500px">
                         <div class="p-0" style="background-color:#ff6176;width:18%;max-width:76px;color:white">
                             <h2 class="text-center pt-2">06</h1>
                             <h3 class="text-center ">Aug</h3>
@@ -103,9 +103,10 @@
                             <img src="assets/event.jfif" alt="" style="object-fit:cover;width:120px;height:100%">
                             <div class="event-desc">
                                 <h5 class="mb-0 ps-3">SPD GAR Music Event</h6>
-                                <p class="p-3 pt-0" style="font-size:0.7em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quibusdam.</p>
+                                <p class="p-3 pt-0 m-0" style="font-size:0.7em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quibusdam.</p>
                                 <i class="fa-solid fa-calendar-days ps-3"></i><span class="pt-0"> 10:00 AM - 8:00 PM</span>
                                 <i class="fa-solid fa-ticket ps-3"></i><span> Free</span>
+                                </br>
                                 <i class="fa-sharp fa-solid fa-chair ps-3"></i><span>100 Left</span>
                             </div>
                         </div>

@@ -25,12 +25,12 @@
     <div class="container">
         <h1 class="text-center">Welcome, Admin</h1>
     <div class="row">
-        <a href="user-booking.php" style="width:50%;text-decoration:none">
+        <a href="user-list.php" style="width:50%;text-decoration:none">
         <div class="col m-4 rounded d-flex justify-content-center align-items-center text-white admin-options" style="border:1px solid #3b7bd4;height:20vh;max-height:230px;min-height:180px;background-color:#3b7bd4">
             <h1>Manage user bookings</h1>
         </div>
         </a>
-        <a href="manage-booking.php" style="width:50%;text-decoration:none">
+        <a href="manage-event.php" style="width:50%;text-decoration:none">
         <div class="col m-4 rounded d-flex justify-content-center align-items-center text-white admin-options" style="border:1px solid #3b7bd4;height:20vh;max-height:230px;min-height:180px;background-color:#3b7bd4">
             <h1>Manage events</h1>
         </div>
