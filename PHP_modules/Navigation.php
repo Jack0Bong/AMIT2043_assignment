@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="#" class="w-100 h-100">
         <a href="index.php"> <img src="assets/tarc_logo.png" alt="" class="img-fluid" style="object-fit:cover; margin-right:30px;" width="30" height="30"></a>
-        <h3>Music Society</h1>
+        <h3 class="pe-2">Music Society</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
