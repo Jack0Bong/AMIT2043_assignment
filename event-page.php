@@ -58,7 +58,7 @@
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perspiciatis adipisci tempore similique dolores cum quod inventore voluptate ad ducimus, illum cumque aliquid nulla odio iste consectetur eaque sint culpa in tempora deserunt esse explicabo voluptates. Reiciendis obcaecati dolorum quas vitae at nemo, odio, a eveniet iste enim hic dolores.</p>
                 <div class="d-flex justify-content-between pt-2">
-                <button class="btn btn-success">Buy Ticket</button>
+                <a href="payment.php"><button class="btn btn-success">Buy Ticket</button></a>
                 <div class="d-flex align-items-center ps-2 pe-2 text-white" style="background-color: #3080ff;border-radius:15px"><i class="fa-solid fa-person pe-2"></i><span> 1000 People are going</span></div>
                 </div>
                 <i class="fa-sharp fa-solid fa-chair ps-3 text-danger"></i><span class="text-danger">100 Left</span>
