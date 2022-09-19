@@ -1,3 +1,8 @@
+<?php
+require('PHP_Modules/conn.php');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,29 +96,44 @@
             </div>
         </div>
         <?php
-        for ($i = 0; $i < 4; $i++) {
-            echo ('<a href="event-page.php" class="d-inline" style="text-decoration:none;color:black;"><div class="row pb-5 m-auto" style="width:fit-content">');
+
+        //sql for event listing
+        $sql = "SELECT * FROM event";
+        $result = $mysqli->query($sql);
+        $resultCount = mysqli_num_rows($result);
+
+        //echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['image'] ).'"/>';
+
+        for ($i = 0; $i < $resultCount / 4; $i++) {
+            echo ('<div class="row pb-5 m-auto" style="width:fit-content">');
             for ($iInner = 0; $iInner < 3; $iInner++) {
-                echo (' <div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:150px;background-color:white;max-width:500px">
+                if ($row = $result->fetch_assoc()) {
+                    $date = strtotime($row['Date'] . $row['Time']);
+
+                    echo (' <a href="event-page.php?Event_id='. $row['Event_ID'] .'" class="d-inline p-0 event-card" style="text-decoration:none;color:black;width:fit-content;max-width:500px"><div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:150px;background-color:white;max-width:500px">
                         <div class="p-0" style="background-color:#ff6176;width:18%;max-width:76px;color:white">
-                            <h2 class="text-center pt-2">06</h1>
-                            <h3 class="text-center ">Aug</h3>
+                            <h2 class="text-center pt-2">'. date("d",$date) .'</h1>
+                            <h3 class="text-center ">'. date("M",$date) .'</h3>
                         </div>
                         <div class="container p-0 d-flex">
-                            <img src="assets/event.jfif" alt="" style="object-fit:cover;width:120px;height:100%">
+                            <img src="data:image/jpeg;base64,'.base64_encode( $row['Event_Image'] ).'" alt="" style="object-fit:cover;width:120px;height:100%">
                             <div class="event-desc">
-                                <h5 class="mb-0 ps-3">SPD GAR Music Event</h6>
-                                <p class="p-3 pt-0 m-0" style="font-size:0.7em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quibusdam.</p>
-                                <i class="fa-solid fa-calendar-days ps-3"></i><span class="pt-0"> 10:00 AM - 8:00 PM</span>
-                                <i class="fa-solid fa-ticket ps-3"></i><span> Free</span>
+                                <h5 class="mb-0 ps-3">'. $row['Event_Name'] .'</h6>
+                                <p class="p-3 pt-0 m-0" style="font-size:0.7em;overflow:hidden;height:50px">'. $row['Event_Desc'] .'</p>
+                                <i class="fa-solid fa-calendar-days ps-3"></i><span class="pt-0">  '. date("h:i A",$date) .'</span>
+                                <i class="fa-solid fa-ticket ps-3"></i><span> RM'. $row['Price'] .'</span>
                                 </br>
-                                <i class="fa-sharp fa-solid fa-chair ps-3"></i><span>100 Left</span>
+                                <i class="fa-sharp fa-solid fa-chair ps-3"></i><span>'.$row['Seat'].' Left</span>
                             </div>
                         </div>
-                    </div>'
-                );
+                    </div>
+                    </a>'
+                    );
+                } else {
+                    break;
+                }
             }
-            echo ('</div></a>');
+            echo ('</div>');
         }
         ?>
     </div>
@@ -139,8 +159,7 @@
 
         const date = new Date()
         let autoMonth = document.querySelectorAll(".month");
-        autoMonth[parseInt(date.getMonth())-1].classList.add("active-month");
-
+        autoMonth[parseInt(date.getMonth()) - 1].classList.add("active-month");
     </script>
 </body>
 

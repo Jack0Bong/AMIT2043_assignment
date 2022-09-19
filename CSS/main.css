@@ -64,6 +64,10 @@
         .event-info-text{
             font-size: 0.8vw;
         }
+
+        .event-card{
+            max-width: 446px!important;
+        }
     }
 
     /* Misc Styling */

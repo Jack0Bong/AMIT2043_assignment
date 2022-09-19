@@ -9,13 +9,22 @@
     if(!empty($_POST["loginEmail"])){
       if(!empty($_POST["loginPassword"])){
         $sql = "SELECT * FROM user WHERE Email = '". $_POST['loginEmail'] ."' AND Password = '". $_POST['loginPassword'] ."'";
+        $adminSql = "SELECT * FROM admin WHERE Email = '". $_POST['loginEmail'] ."' AND password = '". $_POST['loginPassword'] ."'";
         $result = $mysqli->query($sql);
+        $adminResult = $mysqli->query($adminSql);
 
         if(mysqli_num_rows($result) != 0){
-          echo "<script>alert('Login Successful!');</script>";
           $_SESSION["isLoggedIn"] = true;
           $row = $result->fetch_assoc();
           $_SESSION["loginID"] = $row["User_ID"];
+          echo "<script>alert('Login Successful!');</script>";
+          Header("Location:index.php");
+        }else if(mysqli_num_rows($adminResult) != 0){
+          $_SESSION["adminLoggedIn"] = true;
+          $row = $result->fetch_assoc();
+          $_SESSION["adminID"] = $row["Admin_ID"];
+          echo "<script>alert('Login Successful!');</script>";
+          Header("Location:admin-page.php");
         }else{
           $loginEmailErr= "Incorrect email or password";
           $loginPasswordErr= "Incorrect email or password";
