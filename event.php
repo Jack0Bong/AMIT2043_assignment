@@ -85,13 +85,9 @@ session_start();
                 <h1 class="text-center text-white">2022 EVENTS LISTING</h1>
             </div>
             <div class="col">
-                <form action="" class="d-flex align-items-center h-100">
-                    <select class="form-select-sm" aria-label="Default select example">
-                        <option selected>Type of Events</option>
-                        <option value="1">Concerts</option>
-                        <option value="2">Talk Shows</option>
-                        <option value="3">Activities</option>
-                    </select>
+                <form action="event.php" method="POST" class="d-flex align-items-center h-100">
+                    <input style="width:150px" type="text" name="key" class="form-control me-2" placeholder="Search for events" required>
+                    <input type="submit" name="search-sub" class="btn btn-primary">
                 </form>
             </div>
         </div>
@@ -109,14 +105,23 @@ session_start();
             for ($iInner = 0; $iInner < 3; $iInner++) {
                 if ($row = $result->fetch_assoc()) {
                     $date = strtotime($row['Date'] . $row['Time']);
+                    if(isset($_POST['search-sub'])){
+                        if(stripos($row['Event_Name'],$_POST['key']) !== false){
+                            echo '<a href="event-page.php?Event_ID='. $row['Event_ID'] .'" class=" p-0 event-card '. date("M",$date) .'" style="text-decoration:none;color:black;width:fit-content;max-width:500px;display:initial">';
+                        }else{
+                            echo '<a href="event-page.php?Event_ID='. $row['Event_ID'] .'" class=" p-0 event-card '. date("M",$date) .'" style="text-decoration:none;color:black;width:fit-content;max-width:500px;display:none">';
+                        }
+                    }else{
+                        echo '<a href="event-page.php?Event_ID='. $row['Event_ID'] .'" class=" p-0 event-card '. date("M",$date) .'" style="text-decoration:none;color:black;width:fit-content;max-width:500px;display:none">';
+                    }
 
-                    echo (' <a href="event-page.php?Event_id='. $row['Event_ID'] .'" class="d-inline p-0 event-card" style="text-decoration:none;color:black;width:fit-content;max-width:500px"><div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:150px;background-color:white;max-width:500px">
+                    echo ('<div class="col d-flex ms-4 me-4 p-0 add-shadow" style="max-height:150px;background-color:white;max-width:500px">
                         <div class="p-0" style="background-color:#ff6176;width:18%;max-width:76px;color:white">
                             <h2 class="text-center pt-2">'. date("d",$date) .'</h1>
                             <h3 class="text-center ">'. date("M",$date) .'</h3>
                         </div>
                         <div class="container p-0 d-flex">
-                            <img src="data:image/jpeg;base64,'.base64_encode( $row['Event_Image'] ).'" alt="" style="object-fit:cover;width:120px;height:100%">
+                            <img src="data:image/jpeg;base64,'.base64_encode( $row['Event_Image'] ).'" alt="" style="object-fit:cover;width:120px;height:100%;max-height:120px;">
                             <div class="event-desc">
                                 <h5 class="mb-0 ps-3">'. $row['Event_Name'] .'</h6>
                                 <p class="p-3 pt-0 m-0" style="font-size:0.7em;overflow:hidden;height:50px">'. $row['Event_Desc'] .'</p>
@@ -150,17 +155,108 @@ session_start();
         // script to get switch months
         function switchMonth(month) {
             let months = document.querySelectorAll(".month");
+            let allCard = document.querySelectorAll(".event-card");
             for (let index = 0; index < 12; index++) {
                 months[index].classList.remove("active-month");
             }
             months[month].classList.add("active-month");
-            console.log("test");
-        }
 
-        const date = new Date()
-        let autoMonth = document.querySelectorAll(".month");
-        autoMonth[parseInt(date.getMonth()) - 1].classList.add("active-month");
+            for (let index = 0; index < allCard.length; index++) {
+                allCard[index].style.display ="none";
+            }
+
+            let cards;
+            switch (month) {
+                case 0:
+                    cards = document.querySelectorAll(".Jan");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 1:
+                    cards = document.querySelectorAll(".Feb");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 2:
+                    cards = document.querySelectorAll(".Mar");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 3:
+                    cards = document.querySelectorAll(".Apr");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 4:
+                    cards = document.querySelectorAll(".May");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 5:
+                    cards = document.querySelectorAll(".Jun");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 6:
+                    cards = document.querySelectorAll(".Jul");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 7:
+                    cards = document.querySelectorAll(".Aug");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 8:
+                    cards = document.querySelectorAll(".Sep");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 9:
+                    cards = document.querySelectorAll(".Oct");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 10:
+                    cards = document.querySelectorAll(".Nov");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                case 11:
+                    cards = document.querySelectorAll(".Dec");
+                    for(let i=0;i<cards.length;i++){
+                        cards[0].style.display = "inline";
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
     </script>
+
+    <!-- check if search was executed before, otherwise run default -->
+    <?php 
+        if(!isset($_POST['search-sub'])){
+            echo '
+            <script>
+            const date = new Date()
+            switchMonth(parseInt(date.getMonth()));
+            </script>
+            ';
+            
+        }
+    ?>
 </body>
 
 </html>

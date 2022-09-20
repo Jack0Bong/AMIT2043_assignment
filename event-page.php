@@ -33,7 +33,7 @@
 
     <?php
         //sql for event listing
-        $sql = "SELECT * FROM event WHERE Event_ID = '" . $_GET['Event_id'] . "'";
+        $sql = "SELECT * FROM event WHERE Event_ID = '" . $_GET['Event_ID'] . "'";
         $result = $mysqli->query($sql);
         $row = $result->fetch_assoc();
         $date = strtotime($row['Date'] . $row['Time']);
@@ -68,7 +68,7 @@
                 </div>
                 <p><?php echo  $row['Event_Desc'] ?></p>
                 <div class="d-flex justify-content-between pt-2">
-                <a href="payment.php?Event_ID=<?php echo $_GET['Event_id'] ?>"><button class="btn btn-success">Buy Ticket</button></a>
+                <a href="payment.php?Event_ID=<?php echo $_GET['Event_ID'] ?>"><button class="btn btn-success">Buy Ticket</button></a>
                 <div class="d-flex align-items-center ps-2 pe-2 text-white" style="background-color: #3080ff;border-radius:15px"><i class="fa-solid fa-person pe-2"></i><span> 1000 People are going</span></div>
                 </div>
                 <i class="fa-sharp fa-solid fa-chair ps-3 text-danger"></i><span class="text-danger">100 Left</span>
