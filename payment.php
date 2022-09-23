@@ -1,6 +1,10 @@
 <?php
-require("PHP_modules/conn.php");
 session_start();
+require("PHP_modules/conn.php");
+if(!isset($_SESSION["isLoggedIn"])){
+    Header("Location:login.php");
+}
+
 
 if (isset($_POST['sub-buy'])) {
     if (isset($_POST["payment"])) {

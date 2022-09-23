@@ -1,3 +1,10 @@
+<?php
+session_start();
+require("PHP_modules/conn.php");
+if (!isset($_SESSION["adminLoggedIn"])) {
+    Header("Location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +22,11 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
+
+<?php
+$sql = "SELECT * FROM event";
+$result = $mysqli->query($sql);
+?>
 
 <body>
     <!-- Font Awesome CDN -->
@@ -40,27 +52,42 @@
                     <td class="fw-bold">ACTION</td>
                     <td class="fw-bold">ACTION</td>
                 </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td>E001</td>
-                    <td class="fw-semibold text-danger">SPD GAR MUSIC EVENT</td>
-                    <td class="fw-light">06 AUG</td>
-                    <td class="fw-light">10:00 AM - 12:00 AM</td>
-                    <td class="fw-light">Setapak</td>
-                    <td class="text-success">RM12.00</td>
-                    <td><button class="btn btn-info text-white">VIEW PARTICIPANT</button></td>
-                    <td><button class="btn btn-primary">EDIT</button></td>
-                    <td><button class="btn btn-danger">DELETE</button></td>
-                </tr>
-                
+                <?php
+                for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                    $row = $result->fetch_assoc();
+                    $date = strtotime($row['Date'] . $row['Time']);
+                    echo ('
+                        <tr style="background-color:#f0f0f0;">
+                            <td>' . $row['Event_ID'] . '</td>
+                            <td class="fw-semibold text-danger">' . $row['Event_Name'] . '</td>
+                            <td class="fw-light">' . date("d M", $date) . '</td>
+                            <td class="fw-light">' . date("h:i A", $date) . '</td>
+                            <td class="fw-light">' . $row['Location'] . '</td>
+                            <td class="text-success">RM' . $row['Price'] . '</td>
+                            <td><button class="btn btn-info text-white">VIEW PARTICIPANT</button></td>
+                            <td><a href="edit-event.php?Event_ID=' . $row['Event_ID'] . '"><button class="btn btn-primary">EDIT</button></a></td>
+                            <td><button class="btn btn-danger" onclick="delEvent('. '`' . $row['Event_Name'] .'`' .',`' . $row['Event_ID'] .'`' .')">DELETE</button></td>
+                        </tr>');
+                }
+
+                ?>
+
             </tbody>
         </table>
     </div>
 
-    
+
     <!-- Footer import -->
     <?php require("PHP_modules/footer.php") ?>
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function delEvent(eventName,eventID) {
+            if (confirm("Are you sure you want to delete event '" + eventName + "'")) {
+                window.location.href = "http://localhost/AMIT2043_assignment/delete-event.php?Event_ID=" + eventID;
+            }
+        }
+    </script>
 </body>
 
 </html>
