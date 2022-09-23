@@ -37,6 +37,8 @@
         $result = $mysqli->query($sql);
         $row = $result->fetch_assoc();
         $date = strtotime($row['Date'] . $row['Time']);
+        $sql = "SELECT * FROM booking WHERE Event_ID=". $row['Event_ID'];
+        $seatResult = $mysqli->query($sql);
     ?>
 
     <div class="container mt-5 mb-5">
@@ -68,10 +70,20 @@
                 </div>
                 <p><?php echo  $row['Event_Desc'] ?></p>
                 <div class="d-flex justify-content-between pt-2">
-                <a href="payment.php?Event_ID=<?php echo $_GET['Event_ID'] ?>"><button class="btn btn-success">Buy Ticket</button></a>
-                <div class="d-flex align-items-center ps-2 pe-2 text-white" style="background-color: #3080ff;border-radius:15px"><i class="fa-solid fa-person pe-2"></i><span> 1000 People are going</span></div>
+                <?php 
+                    if($row['Seat'] > 0){
+                       echo '<a href="payment.php?Event_ID='. $_GET['Event_ID'].'">'; 
+                       echo '<button class="btn btn-success">Buy Ticket</button>';
+                       echo '</a>';
+                    }else{
+                        echo '<button class="btn btn-danger">Buy Ticket</button>';
+                    }
+                ?>
+
+
+                <div class="d-flex align-items-center ps-2 pe-2 text-white" style="background-color: #3080ff;border-radius:15px"><i class="fa-solid fa-person pe-2"></i><span> <?php echo mysqli_num_rows($seatResult) ?> People are going</span></div>
                 </div>
-                <i class="fa-sharp fa-solid fa-chair ps-3 text-danger"></i><span class="text-danger">100 Left</span>
+                <i class="fa-sharp fa-solid fa-chair ps-3 text-danger"></i><span class="text-danger"><?php echo $row['Seat'] ?> Left</span>
             </div>
         </div>
     </div>

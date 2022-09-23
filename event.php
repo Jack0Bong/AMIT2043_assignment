@@ -105,6 +105,7 @@ session_start();
             for ($iInner = 0; $iInner < 3; $iInner++) {
                 if ($row = $result->fetch_assoc()) {
                     $date = strtotime($row['Date'] . $row['Time']);
+
                     if(isset($_POST['search-sub'])){
                         if(stripos($row['Event_Name'],$_POST['key']) !== false){
                             echo '<a href="event-page.php?Event_ID='. $row['Event_ID'] .'" class=" p-0 event-card '. date("M",$date) .'" style="text-decoration:none;color:black;width:fit-content;max-width:500px;display:initial">';
@@ -128,7 +129,7 @@ session_start();
                                 <i class="fa-solid fa-calendar-days ps-3"></i><span class="pt-0">  '. date("h:i A",$date) .'</span>
                                 <i class="fa-solid fa-ticket ps-3"></i><span> RM'. $row['Price'] .'</span>
                                 </br>
-                                <i class="fa-sharp fa-solid fa-chair ps-3"></i><span>'.$row['Seat'].' Left</span>
+                                <i class="fa-sharp fa-solid fa-chair ps-3"></i><span>'.($row['Seat']).' Left</span>
                             </div>
                         </div>
                     </div>

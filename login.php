@@ -24,6 +24,7 @@
           Header("Location:index.php");
         }else if(mysqli_num_rows($adminResult) != 0){
           //Admin login if successful
+          $_SESSION["userID"] = 100;
           $_SESSION["adminLoggedIn"] = true;
           $row = $result->fetch_assoc();
           $_SESSION["adminID"] = $row["Admin_ID"];

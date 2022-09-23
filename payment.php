@@ -1,30 +1,51 @@
 <?php
 session_start();
 require("PHP_modules/conn.php");
-if(!isset($_SESSION["isLoggedIn"])){
+if (!isset($_SESSION["isLoggedIn"]) && !isset($_SESSION["adminLoggedIn"])) {
     Header("Location:login.php");
 }
 
 
 if (isset($_POST['sub-buy'])) {
     if (isset($_POST["payment"])) {
-        if ($_POST["payment"] == "cc") {
-            if ($_POST['cc_num'] != "") {
-                $sql = "INSERT INTO booking (Event_ID,User_ID,Quantity,payment_method,cc_number) VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Credit Card','" . $_POST['cc_num'] . "')";
-                $mysqli->query($sql);
-                header("Location:event.php");
-            } else {
-                $ccErr = "Please fill in the credit card number";
-            }
-        } else if ($_POST["payment"] == "sc") {
-            if ($_POST['sc_num'] != "") {
-                $sql = "INSERT INTO booking (Event_ID,User_ID,Quantity,payment_method,student_id) VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Student Card','" . $_POST['sc_num'] . "')";
-                $mysqli->query($sql);
+        $sql = "SELECT * FROM event";
+        $result = $mysqli->query($sql);
+        $row = $result->fetch_assoc();
 
-                header("Location:event.php");
-            } else {
-                $scErr = "Please fill in the student card number";
+        if ($row['Seat']-$_POST['qty'] >= 0) {
+            if ($_POST["payment"] == "cc") {
+                if ($_POST['cc_num'] != "") {
+                    //Add Booking
+                    $sql = "INSERT INTO booking (Event_ID,User_ID,Quantity,payment_method,cc_number) VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Credit Card','" . $_POST['cc_num'] . "')";
+                    $mysqli->query($sql);
+                    $updatedSeat = $row['Seat'] - $_POST['qty'];
+
+                    //Update Qty
+                    $sql = "UPDATE event SET Seat =" . $updatedSeat . " WHERE Event_ID=" . $_GET['Event_ID'];
+                    $mysqli->query($sql);
+                    header("Location:event.php");
+                } else {
+                    $ccErr = "Please fill in the credit card number";
+                }
+            } else if ($_POST["payment"] == "sc") {
+                if ($_POST['sc_num'] != "") {
+                    //Add Booking
+                    $sql = "INSERT INTO booking (Event_ID,User_ID,Quantity,payment_method,student_id) VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Student Card','" . $_POST['sc_num'] . "')";
+                    $mysqli->query($sql);
+
+                    //Update Qty
+                    $updatedSeat = $row['Seat'] - $_POST['qty'];
+                    $sql = "UPDATE event SET Seat =" . $updatedSeat . " WHERE Event_ID=" . $_GET['Event_ID'];
+                    $mysqli->query($sql);
+                    header("Location:event.php");
+
+                    header("Location:event.php");
+                } else {
+                    $scErr = "Please fill in the student card number";
+                }
             }
+        }else{
+            $qtyErr= "Not enough seat is available";
         }
     } else {
         $paymentErr = "Please select a payment method";
@@ -87,8 +108,7 @@ if (isset($_POST['sub-buy'])) {
                         </td>
                         <td>
                             <div class="mt-5">
-                                <h3>SPD GAR</h3>
-                                <p>test</p>
+                                <h3><?php echo $row['Event_Name']; ?></h3>
                             </div>
                         </td>
                         <td class="h-100">
@@ -97,6 +117,7 @@ if (isset($_POST['sub-buy'])) {
                                 <input value="1" class="text-center quantity" type="number" name="qty" min="1" style="width: 60px;-webkit-appearance: none;">
                                 <button class="btn btn-outline-secondary" type="button" onclick="quantityManage(1)">+</button>
                             </div>
+                            <p class="text-danger"><?php echo isset($qtyErr) ? $qtyErr  : ""  ?></p>
                         </td>
                         <td>
                             <div class="mt-5">
@@ -132,7 +153,7 @@ if (isset($_POST['sub-buy'])) {
                             <div class="sc" style="display:none">
                                 <br>
                                 <label for="">Student Card Number</label>
-                                <input type="tel" name="sc_num" pattern="[0-9\s]{7}" placeholder="xxxxxxx" class="form-control" >
+                                <input type="tel" name="sc_num" pattern="[0-9\s]{7}" placeholder="xxxxxxx" class="form-control">
                                 <p class="text-danger text-center"><?php echo isset($scErr) ? $scErr  : ""  ?></p>
                             </div>
                         </div>
@@ -188,12 +209,12 @@ if (isset($_POST['sub-buy'])) {
         }
     </script>
 
-    <?php 
-        if(isset($ccErr)){
-            echo "<script>paymentMethod(0)</script>";
-        }else if(isset($scErr)){
-            echo "<script>paymentMethod(1)</script>";
-        }
+    <?php
+    if (isset($ccErr)) {
+        echo "<script>paymentMethod(0)</script>";
+    } else if (isset($scErr)) {
+        echo "<script>paymentMethod(1)</script>";
+    }
     ?>
 </body>
 
