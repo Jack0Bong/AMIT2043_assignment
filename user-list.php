@@ -36,7 +36,8 @@ if (!isset($_SESSION["adminLoggedIn"])) {
         $mysqli->query($sql);
         $sql = "DELETE FROM user WHERE User_ID=". $_GET['User_ID'];
         $mysqli->query($sql);
-        echo '<div class="container rounded" style="background-color:#CB1C1C;width:25vw"><h6 class="text-white" style="padding:5%">Deleted user ID '. $_POST["userID"] .'  from the booking list</h6></div>';
+        echo '<div class="container rounded" style="background-color:#CB1C1C;width:25vw"><h6 class="text-white" style="padding:5%">Deleted user ID '. $_POST["userID"] .'  
+         the booking list</h6></div>';
     }
 
     $sql = "SELECT * FROM user";
