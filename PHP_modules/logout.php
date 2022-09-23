@@ -4,5 +4,5 @@
     unset($_SESSION['adminLoggedIn']);
     unset($_SESSION['userID']);
     unset($_SESSION['adminID']);
-    header("Location:../index.php");
+    header("Location:../login.php");
 ?>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+require("PHP_modules/conn.php");
+if (!isset($_SESSION["adminLoggedIn"])) {
+    Header("Location:login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +29,20 @@
     <script src="https://kit.fontawesome.com/deebd6333b.js" crossorigin="anonymous"></script>
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
+
+    <?php
+    if(isset($_POST['del-sub'])){
+        $sql = "DELETE FROM booking WHERE User_ID=". $_GET['User_ID'];
+        $mysqli->query($sql);
+        $sql = "DELETE FROM user WHERE User_ID=". $_GET['User_ID'];
+        $mysqli->query($sql);
+        echo '<div class="container rounded" style="background-color:#CB1C1C;width:25vw"><h6 class="text-white" style="padding:5%">Deleted user ID '. $_POST["userID"] .'  from the booking list</h6></div>';
+    }
+
+    $sql = "SELECT * FROM user";
+    $result = $mysqli->query($sql);
+    ?>
+
     <div class="booking-list container mb-5 mt-5">
         <table class="table table" style="border:1px solid #f0f0f2">
             <div class="d-flex" style="width:40%;">
@@ -29,36 +51,33 @@
             <tbody>
                 <tr class="text-white" style="background-color: #ff3dc5;">
                     <th class="fw-bold">USER ID</th>
-                    <td class="fw-bold">USERNAME</td>
+                    <td class="fw-bold">First Name</td>
+                    <td class="fw-bold">Last Name</td>
                     <td class="fw-bold">MOBILE NUMBER</td>
                     <td class="fw-bold">EMAIL</td>
                     <td class="fw-bold">ACTION</td>
                     <td class="fw-bold">ACTION</td>
                 </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td>U001</td>
-                    <td class="fw-semibold text-danger">Roel Ascart</td>
-                    <td class="fw-light">012-3456789</td>
-                    <td class="fw-light">roel@gmail.com</td>
-                    <td><a href="user-booking-list.php?id=U001"><button class="btn btn-primary w-75">View Bookings</button></a></td>
-                    <td><button class="btn btn-danger w-75">Delete User</button></td>
-                </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td>U001</td>
-                    <td class="fw-semibold text-danger">Roel Ascart</td>
-                    <td class="fw-light">012-3456789</td>
-                    <td class="fw-light">roel@gmail.com</td>
-                    <td><a href="user-booking-list.php?id=U001"><button class="btn btn-primary w-75">View Bookings</button></a></td>
-                    <td><button class="btn btn-danger w-75">Delete User</button></td>
-                </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td>U001</td>
-                    <td class="fw-semibold text-danger">Roel Ascart</td>
-                    <td class="fw-light">012-3456789</td>
-                    <td class="fw-light">roel@gmail.com</td>
-                    <td><a href="user-booking-list.php?id=U001"><button class="btn btn-primary w-75">View Bookings</button></a></td>
-                    <td><button class="btn btn-danger w-75">Delete User</button></td>
-                </tr>
+                <?php
+                for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                    $row = $result->fetch_assoc();
+                    echo ('<tr style="background-color:#f0f0f0;">
+                        <td>' . $row['User_ID'] . '</td>
+                        <td class="fw-semibold text-danger">' . $row['First_Name'] . '</td>
+                        <td class="fw-semibold text-danger">' . $row['Last_Name'] . '</td>
+                        <td class="fw-light">' . $row['Mobile_Number'] . '</td>
+                        <td class="fw-light">' . $row['Email'] . '</td>
+                        <form action="user-booking-list.php?User_ID=' . $row["User_ID"] . '" method="POST">
+                        <td><input type="submit" value="View Booking" class="btn btn-primary w-75"></td>
+                        <input type="text" name="userID" value="' . $row['User_ID'] . '" style="display:none">
+                        </form>
+                        <form action="user-list.php?User_ID=' . $row["User_ID"] . '" method="POST">
+                        <td><input type="submit" name="del-sub" value="REMOVE" class="btn btn-danger w-75"></td>
+                        <input type="text" name="userID" value="' . $row['User_ID'] . '" style="display:none">
+                        </form>
+                    </tr>');
+                }
+                ?>
             </tbody>
         </table>
     </div>

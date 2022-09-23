@@ -10,17 +10,18 @@ if (isset($_POST['sub-buy'])) {
     if (isset($_POST["payment"])) {
         if ($_POST["payment"] == "cc") {
             if ($_POST['cc_num'] != "") {
-                $sql = "INSERT INTO booking Event_ID,User_ID,Quantity,payment_method,cc_number VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Credit Card','" . $_POST['cc_num'] . "')";
+                $sql = "INSERT INTO booking (Event_ID,User_ID,Quantity,payment_method,cc_number) VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Credit Card','" . $_POST['cc_num'] . "')";
                 $mysqli->query($sql);
-                header("Location:index.php");
+                header("Location:event.php");
             } else {
                 $ccErr = "Please fill in the credit card number";
             }
         } else if ($_POST["payment"] == "sc") {
             if ($_POST['sc_num'] != "") {
-                $sql = "INSERT INTO booking (Event_ID,User_ID,Quantity,payment_method,cc_number) VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Student Card','" . $_POST['sc_num'] . "')";
+                $sql = "INSERT INTO booking (Event_ID,User_ID,Quantity,payment_method,student_id) VALUES (" . $_GET['Event_ID'] . "," . $_SESSION['userID'] . "," . $_POST['qty'] . ",'Student Card','" . $_POST['sc_num'] . "')";
                 $mysqli->query($sql);
-                header("Location:index.php");
+
+                header("Location:event.php");
             } else {
                 $scErr = "Please fill in the student card number";
             }

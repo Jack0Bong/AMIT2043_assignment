@@ -64,7 +64,7 @@ $result = $mysqli->query($sql);
                             <td class="fw-light">' . date("h:i A", $date) . '</td>
                             <td class="fw-light">' . $row['Location'] . '</td>
                             <td class="text-success">RM' . $row['Price'] . '</td>
-                            <td><button class="btn btn-info text-white">VIEW PARTICIPANT</button></td>
+                            <td><a href="event-participant.php?Event_ID=' . $row['Event_ID'] . '"><button class="btn btn-info text-white">VIEW PARTICIPANT</button></a></td>
                             <td><a href="edit-event.php?Event_ID=' . $row['Event_ID'] . '"><button class="btn btn-primary">EDIT</button></a></td>
                             <td><button class="btn btn-danger" onclick="delEvent('. '`' . $row['Event_Name'] .'`' .',`' . $row['Event_ID'] .'`' .')">DELETE</button></td>
                         </tr>');
