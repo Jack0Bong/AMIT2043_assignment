@@ -40,7 +40,7 @@ if (isset($_POST['change-sub'])) {
         $sql = "UPDATE event SET Event_Name='". $_POST['eventName'] ."',Event_Image='". $imgData ."',Event_Desc='". $_POST['eventDesc'] ."',Date='". $_POST['eventDate'] ."',Time='". $_POST['eventTime'] ."',Location='". $_POST['eventLocation'] ."',Price='". $_POST['eventPrice'] ."',Seat='". $_POST['eventSeat'] ."' WHERE Event_ID = " . $_GET['Event_ID'];
         $mysqli->query($sql);
     }else{
-        $sql = "UPDATE event SET Event_Name='". $_POST['eventName'] ."',Event_Desc='". $_POST['eventDesc'] ."',Date='". $_POST['eventDate'] ."',Time='". $_POST['eventTime'] ."',Location='". $_POST['eventLocation'] ."',Price='". $_POST['eventPrice'] ."',Seat='". $_POST['eventSeat'] ."' WHERE Event_ID = " . $_GET['Event_ID'];
+        $sql = "UPDATE event SET Event_Name='". $_POST['eventName'] ."',Event_Desc='". $_POST['eventDesc'] ."',Date='". $_POST['eventDate'] ."',Time='". $_POST['eventTime'] ."',Location='". $_POST['eventLocation'] ."',Price=". $_POST['eventPrice'] .",Seat=". $_POST['eventSeat'] ." WHERE Event_ID = " . $_GET['Event_ID'];
         $mysqli->query($sql);
     }
 }
