@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2022 at 12:18 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.3.30
+-- Generation Time: Sep 24, 2022 at 02:50 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -114,7 +114,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`User_ID`, `First_Name`, `Last_Name`, `Email`, `Mobile_Number`, `Password`) VALUES
-(2, 'jack', 'bong', 'bonghjack@gmail.com', '011213231998', '123');
+(2, 'jack', 'bong', 'bonghjack@gmail.com', '011213231998', '123'),
+(100, 'TEST', 'TEST', 'TEST DO NOT DELETE', '011212313123', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -166,7 +167,7 @@ ALTER TABLE `event`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `User_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- Constraints for dumped tables
