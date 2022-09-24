@@ -30,6 +30,7 @@ if (isset($_POST['add-sub'])) {
 
     if (date('Y-m-d', $date) <= $currDate) {
       $dateErr = "Event date can't be before or on " . date('d-m-Y');;
+      $err = true;
     }
   }
 
@@ -61,6 +62,7 @@ if (isset($_POST['add-sub'])) {
   } else if ($_POST['eventSeat'] < 0) {
     $seatErr = "Seat number can't be lesser than 0";
     $err = true;
+    
   }
 
   // Img check
@@ -69,7 +71,7 @@ if (isset($_POST['add-sub'])) {
     $err = true;
   }
 
-  if (!$err) {
+  if ($err == false) {
     $imgData = addslashes(file_get_contents($_FILES['imgFile']['tmp_name']));
     $sql = "INSERT INTO event (Event_Name,Event_Image,Event_Desc,Date,Time,Location,Price,Seat) VALUES ('" . $_POST['eventName'] . "','" . $imgData . "','" . $_POST['eventDesc'] . "','" . $_POST['eventDate'] . "','" . $_POST['eventTime'] . "','" . $_POST['eventLocation'] . "'," . $_POST['eventPrice'] . "," . $_POST['eventSeat'] . ")";
     $mysqli->query($sql);
@@ -106,8 +108,10 @@ if (isset($_POST['add-sub'])) {
       <div class="container" style="width:30vw;min-width:350px;">
         <?php
         if (isset($err)) {
-          if (!$err) {
-            echo '<div class="container rounded" style="background-color:#099226;width:25vw"><h6 class="text-white" style="padding:5%">Event successfully  Added</h6></div>';
+          if ($err == false) {
+            echo '<div class="container rounded" style="background-color:#099226;width:25vw"><h6 class="text-white" style="padding:5%">Event successfully Added</h6></div>';
+          }else{
+            echo '<div class="container rounded" style="background-color:#CD2727;width:25vw"><h6 class="text-white" style="padding:5%">Event unsuccessfully Added</h6></div>';
           }
         }
         ?>
