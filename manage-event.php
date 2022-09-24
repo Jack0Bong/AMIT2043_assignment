@@ -37,9 +37,6 @@ $result = $mysqli->query($sql);
     <h1 class="text-center mt-5">Manage Events</h1>
     <div class="booking-list container mb-5">
         <table class="table table" style="border:1px solid #f0f0f2">
-            <div class="d-flex justify-content-between" style="width:100%;">
-                <input type="text ps-5 pe-5" style="width:100%;border:none;font-family: 'Roboto';font-weight: 600;" placeholder='Search for keywords'></input>
-            </div>
             <tbody>
                 <tr class="text-white" style="background-color: #47ad62;">
                     <th class="fw-bold">EVENT ID</th>
@@ -63,7 +60,7 @@ $result = $mysqli->query($sql);
                             <td class="fw-light">' . date("d M", $date) . '</td>
                             <td class="fw-light">' . date("h:i A", $date) . '</td>
                             <td class="fw-light">' . $row['Location'] . '</td>
-                            <td class="text-success">RM' . $row['Price'] . '</td>
+                            <td class="text-success">RM' . number_format((float)$row['Price'], 2, '.', '') . '</td>
                             <td><a href="event-participant.php?Event_ID=' . $row['Event_ID'] . '"><button class="btn btn-info text-white">VIEW PARTICIPANT</button></a></td>
                             <td><a href="edit-event.php?Event_ID=' . $row['Event_ID'] . '"><button class="btn btn-primary">EDIT</button></a></td>
                             <td><button class="btn btn-danger" onclick="delEvent('. '`' . $row['Event_Name'] .'`' .',`' . $row['Event_ID'] .'`' .')">DELETE</button></td>

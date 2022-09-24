@@ -5,6 +5,11 @@ if (!isset($_SESSION["isLoggedIn"]) && !isset($_SESSION["adminLoggedIn"])) {
     Header("Location:login.php");
 }
 
+    if(isset($_POST['save-sub'])){
+        $sql = "UPDATE user SET First_Name='".$_POST['firstName']."',Last_Name='".$_POST['lastName']."',Email='".$_POST['email']."',Mobile_Number='".$_POST['mobile']."' WHERE User_ID=". $_SESSION['userID'];
+        $mysqli->query($sql);
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +46,11 @@ if (!isset($_SESSION["isLoggedIn"]) && !isset($_SESSION["adminLoggedIn"])) {
     <!-- Navigation bar import -->
     <?php require("PHP_modules/Navigation.php") ?>
 
+    <?php 
+        $sql = "SELECT * FROM user WHERE User_ID=" . $_SESSION['userID'];
+        $result = $mysqli->query($sql);
+        $row = $result->fetch_assoc();
+    ?>
 
     <!-- Account content -->
     <div class="container rounded bg-white mt-5 mb-5">
@@ -48,8 +58,8 @@ if (!isset($_SESSION["isLoggedIn"]) && !isset($_SESSION["adminLoggedIn"])) {
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-cEnter text-cEnter p-3 py-5">
                     <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
-                    <span class="font-weight-bold">Edogaru</span>
-                    <span class="text-black-50">edogaru@mail.com.my</span>
+                    <span class="font-weight-bold"><?php echo $row['First_Name'] ?></span>
+                    <span class="text-black-50"><?php echo $row['Email'] ?></span>
                     <a href="booking-list.php" style="text-decoration:none;" class="d-flex justify-content-between w-50 align-items-center pt-2">
                         <span>Booking List</span>
                         <i class="fa-solid fa-angle-right"></i>
@@ -61,15 +71,17 @@ if (!isset($_SESSION["isLoggedIn"]) && !isset($_SESSION["adminLoggedIn"])) {
                     <div class="d-flex justify-content-between align-items-cEnter mb-3">
                         <h4 class="text-right">Profile Settings</h4>
                     </div>
+                    <form action="account.php" method="POST">
                     <div class="row mt-2">
-                        <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                        <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                        <div class="col-md-6"><label class="labels">Name</label><input required name="firstName" type="text" class="form-control" placeholder="first name" value="<?php echo $row['First_Name'] ?>"></div>
+                        <div class="col-md-6"><label class="labels">Surname</label><input required type="text" name="lastName" class="form-control" value="<?php echo $row['Last_Name'] ?>" placeholder="surname"></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="Enter phone number" value=""></div>
-                        <div class="col-md-12"><label class="labels">Email</label><input type="text" class="form-control" placeholder="Enter email id" value=""></div>
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input required type="tel" class="form-control" pattern="01[0-9][0-9]{9}" name="mobile" value="<?php echo $row['Mobile_Number'] ?>"></div>
+                        <div class="col-md-12"><label class="labels">Email</label><input required type="email" name="email" class="form-control" placeholder="Enter Email" value="<?php echo $row['Email'] ?>"></div>
                     </div>
-                    <div class="mt-5 text-cEnter"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                    <div class="mt-5 text-cEnter"><input class="btn btn-primary profile-button" type="submit" name="save-sub" value="Save"></div>
+                    </form>
                 </div>
             </div>
         </div>

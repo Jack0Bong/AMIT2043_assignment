@@ -28,7 +28,7 @@ if (isset($_POST['add-sub'])) {
     $date = strtotime($_POST['eventDate']);
     $currDate = date('Y-m-d');
 
-    if (date('Y-m-d', $date) < $currDate) {
+    if (date('Y-m-d', $date) <= $currDate) {
       $dateErr = "Event date can't be before or on " . date('d-m-Y');;
     }
   }

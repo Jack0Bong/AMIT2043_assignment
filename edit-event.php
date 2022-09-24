@@ -28,7 +28,7 @@ if (isset($_POST['change-sub'])) {
     }else if($_POST['eventPrice'] < 0){
         $priceErr = "Price can't be lesser than 0";
     }
-    if(empty($_POST['eventSeat'])){
+    if(empty($_POST['eventSeat'] && $_POST['eventSeat'] != 0)){
         $seatErr = "Seat number can't be empty";
     }else if($_POST['eventSeat'] < 0){
         $seatErr = "Seat number can't be lesser than 0";

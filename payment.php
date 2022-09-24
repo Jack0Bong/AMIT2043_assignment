@@ -121,7 +121,7 @@ if (isset($_POST['sub-buy'])) {
                             <div class="mt-5">
                                 RM
                                 <span class="price">
-                                    <?php echo $row['Price'] ?>
+                                    <?php echo number_format((float)$row['Price'], 2, '.', '') ?>
                                 </span>
                             </div>
                         </td>

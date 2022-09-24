@@ -127,7 +127,7 @@ session_start();
                                 <h5 class="mb-0 ps-3">'. $row['Event_Name'] .'</h6>
                                 <p class="p-3 pt-0 m-0" style="font-size:0.7em;overflow:hidden;height:50px">'. $row['Event_Desc'] .'</p>
                                 <i class="fa-solid fa-calendar-days ps-3"></i><span class="pt-0">  '. date("h:i A",$date) .'</span>
-                                <i class="fa-solid fa-ticket ps-3"></i><span> RM'. $row['Price'] .'</span>
+                                <i class="fa-solid fa-ticket ps-3"></i><span> RM'. number_format((float)$row['Price'], 2, '.', '') .'</span>
                                 </br>
                                 <i class="fa-sharp fa-solid fa-chair ps-3"></i><span>'.($row['Seat']).' Left</span>
                             </div>

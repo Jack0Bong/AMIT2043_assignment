@@ -60,7 +60,7 @@
                     <div class="vert-line"></div>
                     <div class="m-1 mt-2 d-flex align-center flex-column text-center">
                         <i class="fa-solid fa-ticket pb-2"></i>
-                        <h4 class="text-center event-info-text">RM<?php echo $row['Price'] ?></h4>
+                        <h4 class="text-center event-info-text">RM<?php echo number_format((float)$row['Price'], 2, '.', '') ?></h4>
                     </div>
                     <div class="vert-line"></div>
                     <div class="m-1 mt-2 d-flex align-center flex-column text-center">
