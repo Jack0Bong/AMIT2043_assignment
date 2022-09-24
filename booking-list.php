@@ -60,7 +60,7 @@ session_start();
                         <td class="fw-light">' . $row['Date'] . '</td>
                         <td class="fw-light">' . $row['Time'] . '</td>
                         <td class="fw-light">' . $row['Location'] . '</td> 
-                        <td class="fw-light">' . $row['Price'] . '</td>
+                        <td class="fw-light">RM' . number_format((float)$row['Price'], 2, '.', '') . '</td>
                         </tr>
                     ');
                 }
