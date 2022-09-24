@@ -67,7 +67,7 @@ session_start();
         <div class="container">
             <div class="section-header text-center mx-auto mb-5 wow fadeInUp bg" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-1 mb-3 pt-4 font-weight-bold  ">Contact Us</h1>
-                <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                <p>Got questions? Contact us now!.</p>
             </div>
             <div class="row g-5 justify-content-center">
                 <div class="col-lg-5 col-md-12 wow fadeInUp" data-wow-delay="0.1s">

@@ -17,10 +17,6 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="about_us.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">About us</a>
-                </li>
-
-                <li class="nav-item">
                     <a class="nav-link" href="contact_us.php" style="font-family: 'Roboto', sans-serif;font-weight:700;">Contact Us</a>
                 </li>
                 <?php

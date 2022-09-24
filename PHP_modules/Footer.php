@@ -68,9 +68,6 @@
             <a href="event.php" class="text-reset" style="text-decoration:none">Events</a>
           </p>
           <p>
-            <a href="about_us.php" class="text-reset" style="text-decoration:none">About Us</a>
-          </p>
-          <p>
             <a href="contact_us.php" class="text-reset" style="text-decoration:none">Contact Us</a>
           </p>
         
