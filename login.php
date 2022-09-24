@@ -16,6 +16,7 @@
 
 
         if(mysqli_num_rows($result) != 0){
+
           //User login if successful
           $_SESSION["isLoggedIn"] = true;
           $row = $result->fetch_assoc();
@@ -23,6 +24,7 @@
           echo "<script>alert('Login Successful!');</script>";
           Header("Location:index.php");
         }else if(mysqli_num_rows($adminResult) != 0){
+          
           //Admin login if successful
           $_SESSION["userID"] = 100;
           $_SESSION["adminLoggedIn"] = true;

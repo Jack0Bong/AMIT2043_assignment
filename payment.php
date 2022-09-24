@@ -38,8 +38,6 @@ if (isset($_POST['sub-buy'])) {
                     $sql = "UPDATE event SET Seat =" . $updatedSeat . " WHERE Event_ID=" . $_GET['Event_ID'];
                     $mysqli->query($sql);
                     header("Location:event.php");
-
-                    header("Location:event.php");
                 } else {
                     $scErr = "Please fill in the student card number";
                 }
