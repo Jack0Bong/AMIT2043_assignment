@@ -8,7 +8,7 @@ if (!isset($_SESSION["isLoggedIn"]) && !isset($_SESSION["adminLoggedIn"])) {
 
 if (isset($_POST['sub-buy'])) {
     if (isset($_POST["payment"])) {
-        $sql = "SELECT * FROM event";
+        $sql = "SELECT * FROM event WHERE Event_ID=".$_GET['Event_ID'];
         $result = $mysqli->query($sql);
         $row = $result->fetch_assoc();
 
@@ -44,6 +44,7 @@ if (isset($_POST['sub-buy'])) {
             }
         }else{
             $qtyErr= "Not enough seat is available";
+            echo $row['Seat']-$_POST['qty'];
         }
     } else {
         $paymentErr = "Please select a payment method";

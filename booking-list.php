@@ -46,21 +46,24 @@ session_start();
             </tr>
 
                 <?php
-                $sql = "SELECT * FROM Booking INNER JOIN Event ON Event.Event_ID = Booking.Event_ID WHERE User_ID = " . $_SESSION["userID"];
+                $sql = "SELECT * FROM Booking WHERE User_ID = " . $_SESSION["userID"];
                 $result = $mysqli->query($sql);
-                $row = $result->fetch_assoc();
+                
 
                 
 
-                for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                for ($i = 0;$row = $result->fetch_assoc(); $i++) {
+                    $sql = "SELECT * FROM event WHERE Event_ID=".$row['Event_ID'];
+                    $eventResult = $mysqli->query($sql);
+                    $eventRow = $eventResult->fetch_assoc();
                     echo ('        
                         <tr style="background-color:#f0f0f0;">
                         <td>' . $row['Booking_ID'] . '</td>
-                        <td class="fw-semibold text-danger">' . $row['Event_Name'] . '</td>
-                        <td class="fw-light">' . $row['Date'] . '</td>
-                        <td class="fw-light">' . $row['Time'] . '</td>
-                        <td class="fw-light">' . $row['Location'] . '</td> 
-                        <td class="fw-light">RM' . number_format((float)$row['Price'], 2, '.', '') . '</td>
+                        <td class="fw-semibold text-danger">' . $eventRow['Event_Name'] . '</td>
+                        <td class="fw-light">' . $eventRow['Date'] . '</td>
+                        <td class="fw-light">' . $eventRow['Time'] . '</td>
+                        <td class="fw-light">' . $eventRow['Location'] . '</td> 
+                        <td class="fw-light">RM ' . number_format((float)$eventRow['Price'], 2, '.', '') . '</td>
                         </tr>
                     ');
                 }
