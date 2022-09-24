@@ -58,7 +58,9 @@ session_start();
             <div class="row">
                 <div class="col-md-12">
                     <h1 class="lg-text">About Us</h1>
-                    <p class="image-aboutus-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="image-aboutus-para">Since its inception in 2015 SMF has become one of the most anticipated community events worldwide and is currently branching out as a pop-up event in collaboration with established industry powerhouses such as Prolight+Sound Frankfurt and Dubai.
+
+Our aim is to put hand-made digital music more into the public focus. What was once the guitar or drums is now, for many, the turntable or midi controller today. Let’s play! </p>
                 </div>
             </div>
         </div>
@@ -82,11 +84,9 @@ session_start();
                 <hr>
 
                 <!-- Post Content -->
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+                <p class="lead">Our artist program inspire people all over the world as they look spectacular and are a counter design to traditional instruments. Besides the virtuosic instrumental work, however, another feature is crucial: Virtually anything can be played with midi controller or turntables! Any sound, any noise, any sample. No matter how crazy the material, it can be used to create a so called live sound branding. We liken it to the example of a graphic artist, who instead of abstract images that perhaps represent his emotional inner world, can now design your brand experience.</p>
+                <p>There’s no place quite like Berlin, and no amount of carefully-crafted words will convey the experience so we won’t even try. This multicultural melting pot of urban art forms and everything beyond has been the home of Sample Music Festival since its inception. The annual flagship event takes place at Cassiopeia, located in Berlin’s notorious club strip RAW-Gelände in Kreuzberg.</p>
+                <p>Field Day continues to be cooler than a cucumber with a hipster beard and an ironic tattoo. It’s a great place to get day-drunk on craft beer after lining your stomach with the latest vegan food in the super-chill Village Green area. But Field Day has serious muso cred too; it's carefully curated to include edgy guitar music, shoegaze, alternative R&B, smart rap, revered DJs and everything else that’s in vogue. It also boasts one of the best stages on the UK festival circuit, the Barn, a state-of-the-art hangar with a seriously impressive lighting rig.</p>
 
                 <hr>
 
@@ -132,8 +132,8 @@ session_start();
             <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light btn-xl"> <img src="assets/manager1.jpg" style="border-radius:50px;" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
-                <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
-                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/ Creative Director by Day. </span> </div>
+                
+                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Chief executive officer(CEO) </span> </div>
                 <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
                 <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May , 2021</span> </div>
             </div>
@@ -143,8 +143,8 @@ session_start();
             <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light"> <img src="assets/manager2.jpg" style="border-radius:50px;" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
-                <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
-                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/ Creative Director by Day. </span> </div>
+                
+                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Chief operating officer(COO) </span> </div>
                 <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
                 <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May , 2021</span> </div>
             </div>
@@ -156,8 +156,8 @@ session_start();
             <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light btn"> <img src="assets/manager3.jpg" style="border-radius:50px;" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
-                <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
-                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/ Creative Director by Day. </span> </div>
+                
+                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Chief financial officer or controller(CFO) </span> </div>
                 <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
                 <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May , 2021</span> </div>
             </div>
@@ -167,8 +167,8 @@ session_start();
             <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-light"> <img src="assets/manager4.jpg " style="border-radius:50px;" height="100" width="100" /></button> <span class="name mt-3">Eleanor Pena</span> <span class="idd">@eleanorpena</span>
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> <span class="idd1">Oxc4c16a645_b21a</span> <span><i class="fa fa-copy"></i></span> </div>
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> <span class="number">1069 <span class="follow">Followers</span></span> </div>
-                <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> </div>
-                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/ Creative Director by Day. </span> </div>
+                
+                <div class="text mt-3"> <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Chief marketing officer(CMO) </span> </div>
                 <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
                 <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May , 2021</span> </div>
             </div>
