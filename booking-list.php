@@ -39,76 +39,35 @@ session_start();
                 <input type="text ps-5 pe-5" style="width:100%;border:none;font-family: 'Roboto';font-weight: 600;" placeholder='Search for keywords'></input>
             </div>
             <tbody>
-                <?php
-                $sql = "SELECT * FROM Booking,Event WHERE User_ID = " . $_GET["User_ID"] .  " AND Event_ID = " . $_GET["Event_ID"];
-                $result = $mysqli->query($sql);
-                $row = $result->fetch_assoc();
-
-                for ($i = 0; $i < mysqli_num_rows($result); $i++) {
-                    echo ('        
-                 <tr style="background-color:#f0f0f0;">
-                <td>' . $row['Booking_ID'] . '</td>
-                <td class="fw-semibold text-danger">' . $row['Ticket_ID'] . '</td>
-                <td class="fw-light">' . $row['Event_Name'] . '</td>
-                <td class="fw-light">' . $row['Date'] . '</td> 
-                <td class="fw-light">' . $row['Time'] . '</td>
-                <td class="fw-light">' . $row['Location'] . '</td>
-                <td class="text-success">' . $row['Price'] . '</td>
-                </tr>
-            ');
-                }
-                ?>
-
-                <tr class="text-white" style="background-color: #14a1ff;">
-                    <th class="fw-bold">TICKET ID</th>
+            <tr class="text-white" style="background-color: #14a1ff;">
+                    <th class="fw-bold">BOOKING ID</th>
                     <td class="fw-bold">EVENT NAME</td>
                     <td class="fw-bold">DATE</td>
                     <td class="fw-bold">TIME</td>
                     <td class="fw-bold">LOCATION</td>
                     <td class="fw-bold">PRICE</td>
-                </tr>
+            </tr>
 
+                <?php
+                $sql = "SELECT * FROM Booking INNER JOIN Event ON Event.Event_ID = Booking.Event_ID WHERE User_ID = " . $_SESSION["userID"];
+                $result = $mysqli->query($sql);
+                $row = $result->fetch_assoc();
 
-                <tr style="background-color:#f0f0f0;">
-                    <td><?php echo $row['Booking_ID']; ?></td>
-                    <td class="fw-semibold text-danger"><?php echo $row['Event_ID']; ?></td>
-                    <td class="fw-light"><?php echo $row['Date_Purchased']; ?></td>
-                    <td class="fw-light">10:00 AM - 12:00 AM</td>
-                    <td class="fw-light">Setapak</td>
-                    <td class="text-success">RM12.00</td>
-                </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td><?php echo $row['Booking_ID']; ?></td>
-                    <td class="fw-semibold text-danger"><?php echo $row['Event_ID']; ?></td>
-                    <td class="fw-light"><?php echo $row['Date_Purchased']; ?></td>
-                    <td class="fw-light">10:00 AM - 12:00 AM</td>
-                    <td class="fw-light">Setapak</td>
-                    <td class="text-success">RM12.00</td>
-                </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td><?php echo $row['Booking_ID']; ?></td>
-                    <td class="fw-semibold text-danger"><?php echo $row['Event_ID']; ?></td>
-                    <td class="fw-light"><?php echo $row['Date_Purchased']; ?></td>
-                    <td class="fw-light">10:00 AM - 12:00 AM</td>
-                    <td class="fw-light">Setapak</td>
-                    <td class="text-success">RM12.00</td>
-                </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td><?php echo $row['Booking_ID']; ?></td>
-                    <td class="fw-semibold text-danger"><?php echo $row['Event_ID']; ?>;</td>
-                    <td class="fw-light"><?php echo $row['Date_Purchased']; ?></td>
-                    <td class="fw-light">10:00 AM - 12:00 AM</td>
-                    <td class="fw-light">Setapak</td>
-                    <td class="text-success">RM12.00</td>
-                </tr>
-                <tr style="background-color:#f0f0f0;">
-                    <td><?php echo $row['Booking_ID']; ?></td>
-                    <td class="fw-semibold text-danger"><?php echo $row['Event_ID']; ?></td>
-                    <td class="fw-light"><?php echo $row['Date_Purchased']; ?></td>
-                    <td class="fw-light">10:00 AM - 12:00 AM</td>
-                    <td class="fw-light">Setapak</td>
-                    <td class="text-success">RM12.00</td>
-                </tr>
+                
+
+                for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                    echo ('        
+                        <tr style="background-color:#f0f0f0;">
+                        <td>' . $row['Booking_ID'] . '</td>
+                        <td class="fw-semibold text-danger">' . $row['Event_Name'] . '</td>
+                        <td class="fw-light">' . $row['Date'] . '</td>
+                        <td class="fw-light">' . $row['Time'] . '</td>
+                        <td class="fw-light">' . $row['Location'] . '</td> 
+                        <td class="fw-light">' . $row['Price'] . '</td>
+                        </tr>
+                    ');
+                }
+                ?>
             </tbody>
         </table>
     </div>

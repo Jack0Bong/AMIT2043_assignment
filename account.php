@@ -1,9 +1,10 @@
 <?php
 session_start();
 require("PHP_modules/conn.php");
-if (!isset($_SESSION["adminLoggedIn"])) {
+if (!isset($_SESSION["isLoggedIn"]) && !isset($_SESSION["adminLoggedIn"])) {
     Header("Location:login.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
