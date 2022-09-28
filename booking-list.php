@@ -63,7 +63,7 @@ session_start();
                         <td class="fw-light">' . $eventRow['Date'] . '</td>
                         <td class="fw-light">' . $eventRow['Time'] . '</td>
                         <td class="fw-light">' . $eventRow['Location'] . '</td> 
-                        <td class="fw-light">RM ' . number_format((float)$eventRow['Price'], 2, '.', '') . '</td>
+                        <td class="fw-light">RM ' . number_format((float)$eventRow['Price'] * $row['Quantity'], 2, '.', '') . '</td>
                         </tr>
                     ');
                 }

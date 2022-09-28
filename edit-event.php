@@ -16,6 +16,10 @@ if (isset($_POST['change-sub'])) {
     }
     if(empty($_POST['eventDate'])){
         $dateErr = "Date can't be empty";
+    }else if($_POST['eventDate'] < $_POST['eventDateHidden']){
+        $dateErr="New date can't be before the old date";
+    }else if($_POST['eventTime'] < $_POST['eventTimeHidden']){
+        $timeErr = "New time can't be before old time";
     }
     if(empty($_POST['eventTime'])){
         $timeErr = "Time can't be empty";
@@ -111,6 +115,7 @@ $row = $result->fetch_assoc();
                     <div class="form-outline mb-4 text-black">
                         <label class="form-label">Date</label>
                         <input name="eventDate" type="date" class="form-control" value="<?php echo $row['Date'] ?>" />
+                        <input name="eventDateHidden" type="date" class="form-control d-none" value="<?php echo $row['Date'] ?>" />
                         <p style="color:red"><?php echo isset($dateErr) ? ($dateErr): "" ?></p>
                     </div>
 
@@ -123,6 +128,7 @@ $row = $result->fetch_assoc();
                     <div class="form-outline mb-4 text-black">
                         <label class="form-label">Time</label>
                         <input name="eventTime" type="time" class="form-control" value="<?php echo $row['Time'] ?>" />
+                        <input name="eventTimeHidden" type="time" class="form-control d-none" value="<?php echo $row['Time'] ?>" />
                         <p style="color:red"><?php echo isset($timeErr) ? ($timeErr): "" ?></p>
                     </div>
 
